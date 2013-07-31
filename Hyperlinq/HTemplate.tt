@@ -1,0 +1,88 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="C:\Code\Auditionist\HyperlinqCodeGenSource\bin\Debug\HyperlinqCodeGenSource.dll" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="Hyperlinq" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+<#
+  var elements = HyperlinqCodeGenModel.GetElementInfos();
+  var attributes = HyperlinqCodeGenModel.GetAttributeInfos();
+#>
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using Hyperlinq.Imp;
+
+namespace Hyperlinq
+{    
+    public static class H
+    {
+<# foreach (var element in elements)
+
+		{ #>
+		/// <summary>
+        /// <#=element.Summary#>
+        /// </summary>
+        
+		public static HElement <#= element.SafeName #> (params object[] children) { return new HElement ("<#= element.Name #>", null, children); }
+        
+		/// <summary>
+        /// <#=element.Summary#>
+        /// </summary>
+		public static HElement <#= element.SafeName #> (Func<IChain<HAttributes.<#= element.SafeName #>>, IChain<HAttributes.<#= element.SafeName #>>> attributes, params object[] children) { return new HElement ("<#= element.Name #>", attributes (null), children); }        
+
+<# } #>
+        // Helpers
+
+        public static HDoc Doc (IEnumerable<HNode> children) {return HExtensions.Doc (children);}
+        public static HDoc Doc (params HNode[] children) {return HExtensions.Doc (children);}
+        public static HNode Literal (string s) {return HExtensions.Literal (s);}
+        public static string Url (Expression<Action> action) {return HExtensions.Url (action);}
+        public static string Url<T> (Expression<Action<T>> action) {return HExtensions.Url (action);}     
+        public static HElement A (string url, object content, Func<IChain<HAttributes.a>,IChain<HAttributes.a>> attributes = null) {return H.a (a => a.href(url).Join(attributes), content);}
+        public static HElement A (Expression<Action> action, object content, Func<IChain<HAttributes.a>,IChain<HAttributes.a>> attributes = null) {return H.a (a => a.href (HExtensions.Url(action)).Join(attributes), content);}
+    }
+
+    public static class HAttributeExtensions
+    { 
+<# foreach (var attribute in attributes)
+{ #>
+		/// <summary>
+        /// <#=attribute.Summary#>
+        /// </summary>
+        public static IChain<T> <#= attribute.SafeName #><T> (this IChain<T> attributes, object value) where T : HAttribute, <#= attribute.InterfaceNameWithComma #> new() { return attributes.Custom ("<#= attribute.Name #>", value); }        
+
+<# } #>	
+    }
+
+	
+    public static class HAttributes
+    {
+<# foreach (var element in elements)
+{ #>
+        public class <#= element.SafeName #> : HAttribute<#= element.ImplementedInterfaces #>
+        {
+            public <#= element.SafeName #> () { }
+            public <#= element.SafeName #> (string name, object value) : base (name, value) {}
+            public override HAttribute Create (string name, object value) {return new <#= element.SafeName #> (name, value); }
+        }
+
+<# } #>
+
+    }
+
+    namespace Imp
+    {
+
+<# foreach (var attribute in attributes)
+    { #>
+        public interface <#= attribute.InterfaceName #> {}
+<# } #>
+
+    }
+
+}
