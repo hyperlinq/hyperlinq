@@ -1,5 +1,5 @@
 ﻿<#@ template debug="false" hostspecific="false" language="C#" #>
-<#@ assembly name="C:\Code\Auditionist\HyperlinqCodeGenSource\bin\Debug\HyperlinqCodeGenSource.dll" #>
+<#@ assembly name="$(SolutionDir)\HyperlinqCodeGenSource\bin\Debug\HyperlinqCodeGenSource.dll" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="Hyperlinq" #>
 <#@ import namespace="System.Linq" #>
