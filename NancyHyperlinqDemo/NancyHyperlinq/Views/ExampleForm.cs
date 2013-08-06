@@ -15,13 +15,16 @@ namespace NancyHyperlinq
         object ExampleForm (ZooModel model)
         {
             return "" +
-                H.div(
-                    H.p("Form entry: "),
-                    StandardForm(() => PostExampleForm(null), null, new[]
-                    {
-	                    new TextInput (() => model.Cat),
-	                    new TextInput (() => model.Dog)
-                    })
+                MasterPage ("Form Example",
+                    new[] {
+                        H.p("Form entry: "),
+                        StandardForm(() => PostExampleForm(null), null, new[]
+                            {
+	                            new TextInput (() => model.Cat),
+	                            new TextInput (() => model.Dog)
+                            }
+                        )
+                    }
                 ); 
         }
 

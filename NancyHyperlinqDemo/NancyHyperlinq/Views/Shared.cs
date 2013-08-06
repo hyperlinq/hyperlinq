@@ -15,7 +15,7 @@ namespace NancyHyperlinq
                     H.head (
                         H.meta (a => a.charset ("utf-8")),
                         H.title (title),
-                        H.style (a => a.type ("text/css"), "body { text-align: center; }")
+                        H.style(a => a.type("text/css"), "body { text-align: center; } form { margin:0 auto; width:250px }")
                     ),
                     H.body (body)
                );
@@ -30,7 +30,7 @@ namespace NancyHyperlinq
         {          
             return
                 H.form(a => a.method("post")
-                             .action(H.Url(action))
+                             .action(H.Url(action))  
                              .Join (extraAttributes),
                     H.table(
                        from input in inputs
