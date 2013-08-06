@@ -7,12 +7,12 @@
     {
         public IndexModule()
         {
-            var presenter = new MainView();
+            var view = new MainView();
 
-            Get["/"]                     = p => presenter.Index ();
-            Get["/about"]                = p => presenter.About ();
-            Get["/exampleForm"]          = p => presenter.ExampleForm ();
-            Post["/postExampleForm/"]    = p => presenter.PostExampleForm(this.Bind<ZooModel>());
+            Get["/"]                     = p => view.Index ();
+            Get["/about"]                = p => view.About ();
+            Get["/exampleForm"]          = p => view.ExampleForm ();
+            Post["/postExampleForm/"]    = p => view.PostExampleForm(this.Bind<ZooModel>());
         }
     }
 }
