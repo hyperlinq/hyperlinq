@@ -22,7 +22,7 @@ namespace NancyHyperlinq
 	                    new TextInput (() => model.Cat),
 	                    new TextInput (() => model.Dog)
                     })
-                );
+                ); 
         }
 
         public object PostExampleForm(ZooModel model)
