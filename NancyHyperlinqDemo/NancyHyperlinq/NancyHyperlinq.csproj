@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\nancy-logo.png" />
+    <Content Include="Content\Site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

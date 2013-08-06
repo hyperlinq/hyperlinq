@@ -15,7 +15,7 @@ namespace NancyHyperlinq
                     H.head (
                         H.meta (a => a.charset ("utf-8")),
                         H.title (title),
-                        H.style(a => a.type("text/css"), "body { text-align: center; } form { margin:0 auto; width:250px }")
+                        H.link (a => a.rel ("stylesheet").href ("/content/site.css"))
                     ),
                     H.body (body)
                );
