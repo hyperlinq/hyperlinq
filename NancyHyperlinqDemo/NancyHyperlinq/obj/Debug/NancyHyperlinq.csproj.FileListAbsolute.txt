@@ -6,3 +6,4 @@ C:\Users\PC\Documents\GitHub\hyperlinq\NancyHyperlinqDemo\NancyHyperlinq\bin\Nan
 C:\Users\PC\Documents\GitHub\hyperlinq\NancyHyperlinqDemo\NancyHyperlinq\bin\Hyperlinq.xml
 C:\Users\PC\Documents\GitHub\hyperlinq\NancyHyperlinqDemo\NancyHyperlinq\obj\Debug\NancyHyperlinq.dll
 C:\Users\PC\Documents\GitHub\hyperlinq\NancyHyperlinqDemo\NancyHyperlinq\obj\Debug\NancyHyperlinq.pdb
+C:\Users\PC\Documents\GitHub\hyperlinq\NancyHyperlinqDemo\NancyHyperlinq\obj\Debug\NancyHyperlinq.csprojResolveAssemblyReference.cache

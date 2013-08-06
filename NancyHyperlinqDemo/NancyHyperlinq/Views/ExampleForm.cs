@@ -17,7 +17,7 @@ namespace NancyHyperlinq
             return "" +
                 H.div(
                     H.p("Form entry: "),
-                    StandardForm(() => PostExampleForm(null), new[]
+                    StandardForm(() => PostExampleForm(null), null, new[]
                     {
 	                    new TextInput (() => model.Cat),
 	                    new TextInput (() => model.Dog)

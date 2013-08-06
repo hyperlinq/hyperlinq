@@ -26,12 +26,12 @@ namespace NancyHyperlinq
             return H.img(a => a.src("/Content/nancy-logo.png").alt("Nancy logo"));
         }
 
-        HElement StandardForm (Expression<Action> action, IEnumerable<HInput> inputs)
-        {
+        HElement StandardForm (Expression<Action> action, Func<IChain<HAttributes.form>, IChain<HAttributes.form>> extraAttributes, IEnumerable<HInput> inputs)
+        {          
             return
                 H.form(a => a.method("post")
                              .action(H.Url(action))
-                             .css("inputForm"),
+                             .Join (extraAttributes),
                     H.table(
                        from input in inputs
                        select H.tr
