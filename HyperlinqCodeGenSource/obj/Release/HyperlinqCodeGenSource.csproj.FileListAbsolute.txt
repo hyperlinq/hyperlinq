@@ -1,0 +1,4 @@
+C:\Code\Auditionist\HyperlinqCodeGenSource\bin\Release\HyperlinqCodeGenSource.dll
+C:\Code\Auditionist\HyperlinqCodeGenSource\bin\Release\HyperlinqCodeGenSource.pdb
+C:\Code\Auditionist\HyperlinqCodeGenSource\obj\Release\HyperlinqCodeGenSource.dll
+C:\Code\Auditionist\HyperlinqCodeGenSource\obj\Release\HyperlinqCodeGenSource.pdb

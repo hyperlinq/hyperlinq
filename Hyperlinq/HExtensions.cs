@@ -44,15 +44,5 @@ namespace Hyperlinq
             // currently only handles elements
             return new HLiteral (s);
         }
-
-        public static HDoc Doc (IEnumerable<HNode> children)
-        {
-            return new HDoc (children);
-        }
-
-        public static HDoc Doc (params HNode[] children)
-        {
-            return new HDoc (children);
-        }
     }
 }

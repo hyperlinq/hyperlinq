@@ -111,7 +111,12 @@ namespace Hyperlinq
 
     public class HDoc : HElement
     {
-        public HDoc (IEnumerable<HNode> children) : base ("html", null, children) { }
+        public HDoc(IChain<HAttribute> attributes, IEnumerable<object> children) : base("html", attributes, children) { }
+
+        public override string ToString()
+        {
+            return "<!DOCTYPE html>\r\n" + base.ToString();
+        }
     }
 
     public class HText : HNode

@@ -69,4 +69,12 @@ namespace Hyperlinq
             return obj;
         }
     }
+
+    static class NullableHelper
+    {
+        public static Type GetNonNullableType(this Type t)
+        {
+            return Nullable.GetUnderlyingType(t) ?? t;
+        }
+    }
 }

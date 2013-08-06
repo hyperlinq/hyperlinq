@@ -1,0 +1,5 @@
+C:\Code\Auditionist\Hyperlinq\bin\Release\Hyperlinq.XML
+C:\Code\Auditionist\Hyperlinq\bin\Release\Hyperlinq.dll
+C:\Code\Auditionist\Hyperlinq\bin\Release\Hyperlinq.pdb
+C:\Code\Auditionist\Hyperlinq\obj\Release\Hyperlinq.dll
+C:\Code\Auditionist\Hyperlinq\obj\Release\Hyperlinq.pdb

@@ -1,0 +1,8 @@
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\bin\NancyHyperlinq.dll
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\bin\NancyHyperlinq.pdb
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\bin\Nancy.dll
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\bin\Nancy.Hosting.Aspnet.dll
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\obj\Debug\NancyHyperlinq.dll
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\obj\Debug\NancyHyperlinq.pdb
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\bin\Hyperlinq.dll
+c:\users\pc\documents\visual studio 2012\Projects\NancyHyperlinq\NancyHyperlinq\bin\Hyperlinq.xml

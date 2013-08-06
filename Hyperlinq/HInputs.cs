@@ -32,6 +32,7 @@ namespace Hyperlinq
             var body = expression.Body is UnaryExpression ? ((UnaryExpression)expression.Body).Operand : expression.Body;
             return ((MemberExpression)body).Member;
         }
+
     }
 
     public class TextInput : HInput
@@ -60,7 +61,8 @@ namespace Hyperlinq
 
         public override HElement Render ()
         {
-            var options = Enum.GetNames (DataType).Zip (Enum.GetValues (DataType).Cast<object>(), (name, value) => new {name, value});
+            var nonNullableType = DataType.GetNonNullableType();
+            var options = Enum.GetNames(nonNullableType).Zip(Enum.GetValues(nonNullableType).Cast<object>(), (name, value) => new { name, value });
             return
                 H.div (
                     options.Select (option => H.div (
