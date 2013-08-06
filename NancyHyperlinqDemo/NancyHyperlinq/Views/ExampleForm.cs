@@ -20,8 +20,8 @@ namespace NancyHyperlinq
                         H.p("Form entry: "),
                         StandardForm(() => PostExampleForm(null), null, new[]
                             {
-	                            new TextInput (() => model.Cat),
-	                            new TextInput (() => model.Dog)
+	                            new TextInput (() => model.Giraffe),
+	                            new TextInput (() => model.Elephant)
                             }
                         )
                     }
@@ -32,7 +32,7 @@ namespace NancyHyperlinq
         {
             return "" + MasterPage("Hey", new[]
                 {
-                    H.p("You posted the following values: "), H.p(model.Cat), H.p(model.Dog),
+                    H.p("You posted the following values: "), H.p(model.Giraffe), H.p(model.Elephant),
                     H.A("/", "Back Home")
                 });
         }
@@ -40,7 +40,7 @@ namespace NancyHyperlinq
 
     public class ZooModel
     {
-        public string Cat { get; set; }
-        public string Dog { get; set; }
+        public string Giraffe { get; set; }
+        public string Elephant { get; set; }
     }
 }
