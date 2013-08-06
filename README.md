@@ -1,7 +1,9 @@
 hyperlinq
 =========
 
-See https://github.com/hyperlinq/hyperlinq/wiki/FAQ 
+FAQ: https://github.com/hyperlinq/hyperlinq/wiki/FAQ 
+
+Blog: http://hyperlinq.blogspot.co.uk/
 
 The NancyHyperlinq project demos Hyperlinq with NancyFx. NancyFx is a "low ceremony" alternative to MVC.
 
