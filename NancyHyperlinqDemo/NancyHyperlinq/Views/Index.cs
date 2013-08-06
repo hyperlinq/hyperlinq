@@ -5,22 +5,17 @@ using Hyperlinq;
 
 namespace NancyHyperlinq
 {
-    public static class IndexView
+    public partial class MainPresenter
     {
-        public static object Index()
+        public object Index()
         {
             return "" +
-                H.Doc(a => a.lang ("en"),
-                    H.head (
-                        H.meta (a => a.charset ("utf-8")),
-                        H.title ("NancyHyperlinq"),
-                        H.style (a => a.type ("text/css"), "body { text-align: center; }")
-                    ),
-                    H.body (
-                        H.img (a => a.src ("/Content/nancy-logo.png").alt ("Nancy logo")),
-                        H.br (),
-                        "This view was rendered using Hyperlinq"
-                    )
+                MasterPage ("Nancy Hyperlinq", new []
+                    {
+                        NancyLogo(),
+                        H.p ("This view was rendered using Hyperlinq"),
+                        H.A (() => About(), "About")
+                    }
                );
         }
     }

@@ -6,7 +6,10 @@
     {
         public IndexModule()
         {
-            Get["/"] = parameters => IndexView.Index();
+            var presenter = new MainPresenter();
+
+            Get["/"] = parameters => presenter.Index();
+            Get["/about"] = parameters => presenter.About();
         }
     }
 }
