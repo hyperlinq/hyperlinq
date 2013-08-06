@@ -66,6 +66,7 @@
     <Compile Include="IndexModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\About.cs" />
+    <Compile Include="Views\ExampleForm.cs" />
     <Compile Include="Views\Shared.cs" />
     <Compile Include="Views\Index.cs" />
   </ItemGroup>

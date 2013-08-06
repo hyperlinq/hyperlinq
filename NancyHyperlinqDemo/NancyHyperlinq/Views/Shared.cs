@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using Hyperlinq;
 
 namespace NancyHyperlinq
 {
-    public partial class MainPresenter
+    public partial class MainView
     {
         HDoc MasterPage (string title, object body)
         {
@@ -23,6 +24,24 @@ namespace NancyHyperlinq
         HElement NancyLogo()
         {
             return H.img(a => a.src("/Content/nancy-logo.png").alt("Nancy logo"));
+        }
+
+        HElement StandardForm (Expression<Action> action, IEnumerable<HInput> inputs)
+        {
+            return
+                H.form(a => a.method("post")
+                             .action(H.Url(action))
+                             .css("inputForm"),
+                    H.table(
+                       from input in inputs
+                       select H.tr
+                       (
+                           H.td(input is HiddenInput ? null : H.label(a => a.@for(input.Id), input.Label)),
+                           H.td(input.Render())
+                       )
+                    ),
+                    H.p (H.input(a => a.type("submit").value("OK")))
+            );
         }
     }
 }

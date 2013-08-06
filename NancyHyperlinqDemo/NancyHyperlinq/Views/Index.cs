@@ -5,7 +5,7 @@ using Hyperlinq;
 
 namespace NancyHyperlinq
 {
-    public partial class MainPresenter
+    public partial class MainView
     {
         public object Index()
         {
@@ -14,7 +14,8 @@ namespace NancyHyperlinq
                     {
                         NancyLogo(),
                         H.p ("This view was rendered using Hyperlinq"),
-                        H.A (() => About(), "About")
+                        H.A (() => About(), "About"),
+                        H.A (() => ExampleForm(), "Example Form")
                     }
                );
         }

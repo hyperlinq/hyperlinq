@@ -5,7 +5,7 @@ using Hyperlinq;
 
 namespace NancyHyperlinq
 {
-    public partial class MainPresenter
+    public partial class MainView
     {
         public object About()
         {
