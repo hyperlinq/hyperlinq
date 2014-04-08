@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AttributeRouting.Web.Mvc</name>
+    </assembly>
+    <members>
+        <member name="M:AttributeRouting.Web.Mvc.Configuration.AddDefaultRouteConstraint(System.String,System.Web.Routing.IRouteConstraint)">
+            <summary>
+            Automatically applies the specified constraint against url parameters
+            with names that match the given regular expression.
+            </summary>
+            <param name="keyRegex">The regex used to match url parameter names</param>
+            <param name="constraint">The constraint to apply to matched parameters</param>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.Configuration.AddRoutesFromController``1">
+            <summary>
+            Appends the routes from the specified controller type to the end of route collection.
+            </summary>
+            <typeparam name="T">The controller type.</typeparam>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.Configuration.AddRoutesFromControllersOfType``1">
+            <summary>
+            Appends the routes from all controllers that derive from the specified controller type to the route collection.
+            </summary>
+            <typeparam name="T">The base controller type.</typeparam>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.Configuration.UseRouteHandler(System.Func{System.Web.Routing.IRouteHandler})">
+            <summary>
+            Specifies a function that returns an alternate route handler.
+            By default, the route handler is the default MvcRouteHandler.
+            </summary>
+            <param name="routeHandlerFactory">The route hanlder to use.</param>
+        </member>
+        <member name="P:AttributeRouting.Web.Mvc.Configuration.CurrentUICultureResolver">
+            <summary>
+            This delegate returns the current UI culture name,
+            which is used when constraining inbound routes by culture.
+            The default delegate returns the CurrentUICulture name of the current thread.
+            </summary>
+        </member>
+        <member name="P:AttributeRouting.Web.Mvc.Configuration.FrameworkControllerType">
+            <summary>
+            The controller type applicable to this context.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.Constraints.InboundHttpMethodConstraint.#ctor(System.String[])">
+            <summary>
+            Constrains an inbound route by HTTP method.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.Constraints.InboundHttpMethodConstraint.GetUnvalidatedHttpMethodOverride(System.Web.HttpRequestBase)">
+            <remarks>
+            The reason we have our own is to provide support for System.Web.Helpers.Validation.Unvalidated calls.
+            NOTE: This won't be needed once AR targets .NET 4.5.
+            </remarks>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.DELETEAttribute">
+            <summary>
+            Defines a DELETE route for an action in Mvc Controllers.
+            </summary>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.RouteAttribute">
+            <summary>
+            The route information for an action in Mvc Controllers.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.RouteAttribute.#ctor">
+            <summary>
+            Specify the route information for an action. 
+            The route URL will be the name of the action.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.RouteAttribute.#ctor(System.String)">
+            <summary>
+            Specify the route information for an action.
+            </summary>
+            <param name="routeUrl">The url that is associated with this action</param>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.RouteAttribute.#ctor(System.Web.Mvc.HttpVerbs[])">
+            <summary>
+            Specify the route information for an action.
+            The route URL will be the name of the action.
+            </summary>
+            <param name="allowedMethods">The httpMethods against which to constrain the route</param>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.RouteAttribute.#ctor(System.String,System.Web.Mvc.HttpVerbs[])">
+            <summary>
+            Specify the route information for an action.
+            </summary>
+            <param name="routeUrl">The url that is associated with this action</param>
+            <param name="allowedMethods">The httpMethods against which to constrain the route</param>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.DELETEAttribute.#ctor">
+            <summary>
+            Specify a route for DELETE request.
+            The route URL will be the name of the action.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.DELETEAttribute.#ctor(System.String)">
+            <summary>
+            Specify a route for DELETE request.
+            </summary>
+            <param name="routeUrl">The url that is associated with this action</param>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.Extensions.UrlHelperExtensions.GetDomainBase(System.Web.Mvc.UrlHelper,System.String,System.String,System.String,System.Web.Routing.RouteValueDictionary,System.String)">
+            <summary>
+            Gets the domain base url.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="routeName">Name of the route.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="routeValues">The route values.</param>
+            <param name="schema">The schema.</param>
+            <returns></returns>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.Framework.AttributeRoute">
+            <summary>
+            Route to use for ASP.NET MVC routes.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.Framework.AttributeRoute.#ctor(System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,AttributeRouting.Web.Mvc.Configuration)">
+            <summary>
+            Route used by the AttributeRouting framework in web projects.
+            </summary>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.GETAttribute">
+            <summary>
+            Defines a GET route for an action in Mvc Controllers.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.GETAttribute.#ctor">
+            <summary>
+            Specify a route for a GET request.
+            The route URL will be the name of the action.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.GETAttribute.#ctor(System.String)">
+            <summary>
+            Specify a route for a GET request.
+            </summary>
+            <param name="routeUrl">The url that is associated with this action</param>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.POSTAttribute">
+            <summary>
+            Defines a POST route for an action in Mvc Controllers.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.POSTAttribute.#ctor">
+            <summary>
+            Specify a route for a POST request.
+            The route URL will be the name of the action.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.POSTAttribute.#ctor(System.String)">
+            <summary>
+            Specify a route for a POST request.
+            </summary>
+            <param name="routeUrl">The url that is associated with this action</param>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.PUTAttribute">
+            <summary>
+            Defines a PUT route for an action in Mvc Controllers.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.PUTAttribute.#ctor">
+            <summary>
+            Specify a route for a PUT request.
+            The route URL will be the name of the action.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.PUTAttribute.#ctor(System.String)">
+            <summary>
+            Specify a route for a PUT request.
+            </summary>
+            <param name="routeUrl">The url that is associated with this action</param>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.RestfulRouteConventionAttribute">
+            <summary>
+            Automatically generates RESTful-style routes for controller actions matching 
+            Index, New, Create, Show, Edit, Update, Delete, and Destroy.
+            </summary>
+        </member>
+        <member name="T:AttributeRouting.Web.Mvc.RouteCollectionExtensions">
+            <summary>
+            Extensions to the System.Web.Routing.RouteCollection.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.RouteCollectionExtensions.MapAttributeRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Scans the calling assembly for all routes defined with AttributeRouting attributes,
+            using the default conventions.
+            </summary>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.RouteCollectionExtensions.MapAttributeRoutes(System.Web.Routing.RouteCollection,System.Action{AttributeRouting.Web.Mvc.Configuration})">
+            <summary>
+            Scans the specified assemblies for all routes defined with AttributeRouting attributes,
+            and applies configuration options against the routes found.
+            </summary>
+            <param name="routes"> </param>
+            <param name="configurationAction">The initialization action that builds the configuration object</param>
+        </member>
+        <member name="M:AttributeRouting.Web.Mvc.RouteCollectionExtensions.MapAttributeRoutes(System.Web.Routing.RouteCollection,AttributeRouting.Web.Mvc.Configuration)">
+            <summary>
+            Scans the specified assemblies for all routes defined with AttributeRouting attributes,
+            and applies configuration options against the routes found.
+            </summary>
+            <param name="routes"></param>
+            <param name="configuration">The configuration object</param>
+        </member>
+    </members>
+</doc>
