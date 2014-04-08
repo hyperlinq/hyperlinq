@@ -43,10 +43,8 @@ namespace Hyperlinq
         public static HNode Literal (string s) {return HExtensions.Literal (s);}
         public static string Url (Expression<Action> action) {return HExtensions.Url (action);}
         public static string Url<T> (Expression<Action<T>> action) {return HExtensions.Url (action);}     
-        public static HElement A (string url, object content) {return H.a (a => a.href(url), content);}
-        public static HElement A (Expression<Action> action, object content) {return H.a (a => a.href (HExtensions.Url(action)), content);}
-		public static HElement A (ChainFunc<HAttributes.a> attributes, string url, object content) {return H.a (a => a.href(url).Join(attributes), content);}
-        public static HElement A (ChainFunc<HAttributes.a> attributes, Expression<Action> action, object content) {return H.a (a => a.href (HExtensions.Url(action)).Join(attributes), content);}
+		public static HElement A (string url, object content, ChainFunc<HAttributes.a> attributes = null) {return H.a (a => a.href(url).Join(attributes), content);}
+        public static HElement A (Expression<Action> action, object content, ChainFunc<HAttributes.a> attributes = null) {return H.a (a => a.href (HExtensions.Url(action)).Join(attributes), content);}
     }
 
     public static class HAttributeExtensions

@@ -4,12 +4,18 @@
         <name>Hyperlinq</name>
     </assembly>
     <members>
+        <member name="M:Hyperlinq.HyperlinqHelper.Merge``1(Hyperlinq.IChain{``0},Hyperlinq.ChainFunc{``0})">
+            <summary>
+            Merges two attribute chains with css-awareness. Unlike Join, which merely concatenate two chains,
+            Merge merges multiple css attributes into a single css attribute.
+            </summary>
+        </member>
         <member name="M:Hyperlinq.H.a(System.Object[])">
             <summary>
             Defines a hyperlink.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.a(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.a},Hyperlinq.IChain{Hyperlinq.HAttributes.a}},System.Object[])">
+        <member name="M:Hyperlinq.H.a(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.a},System.Object[])">
             <summary>
             Defines a hyperlink.
             </summary>
@@ -19,7 +25,7 @@
             Defines an abbreviation.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.abbr(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.abbr},Hyperlinq.IChain{Hyperlinq.HAttributes.abbr}},System.Object[])">
+        <member name="M:Hyperlinq.H.abbr(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.abbr},System.Object[])">
             <summary>
             Defines an abbreviation.
             </summary>
@@ -29,7 +35,7 @@
             Not supported in HTML5. Defines an acronym.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.acronym(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.acronym},Hyperlinq.IChain{Hyperlinq.HAttributes.acronym}},System.Object[])">
+        <member name="M:Hyperlinq.H.acronym(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.acronym},System.Object[])">
             <summary>
             Not supported in HTML5. Defines an acronym.
             </summary>
@@ -39,7 +45,7 @@
             Defines contact information for the author/owner of a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.address(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.address},Hyperlinq.IChain{Hyperlinq.HAttributes.address}},System.Object[])">
+        <member name="M:Hyperlinq.H.address(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.address},System.Object[])">
             <summary>
             Defines contact information for the author/owner of a document.
             </summary>
@@ -49,7 +55,7 @@
             Not supported in HTML5. Deprecated in HTML 4.01. Defines an embedded applet.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.applet(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.applet},Hyperlinq.IChain{Hyperlinq.HAttributes.applet}},System.Object[])">
+        <member name="M:Hyperlinq.H.applet(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.applet},System.Object[])">
             <summary>
             Not supported in HTML5. Deprecated in HTML 4.01. Defines an embedded applet.
             </summary>
@@ -59,7 +65,7 @@
             Defines an area inside an image-map.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.area(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.area},Hyperlinq.IChain{Hyperlinq.HAttributes.area}},System.Object[])">
+        <member name="M:Hyperlinq.H.area(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.area},System.Object[])">
             <summary>
             Defines an area inside an image-map.
             </summary>
@@ -69,7 +75,7 @@
             Defines an article.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.article(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.article},Hyperlinq.IChain{Hyperlinq.HAttributes.article}},System.Object[])">
+        <member name="M:Hyperlinq.H.article(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.article},System.Object[])">
             <summary>
             Defines an article.
             </summary>
@@ -79,7 +85,7 @@
             Defines content aside from the page content.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.aside(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.aside},Hyperlinq.IChain{Hyperlinq.HAttributes.aside}},System.Object[])">
+        <member name="M:Hyperlinq.H.aside(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.aside},System.Object[])">
             <summary>
             Defines content aside from the page content.
             </summary>
@@ -89,7 +95,7 @@
             Defines sound content.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.audio(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.audio},Hyperlinq.IChain{Hyperlinq.HAttributes.audio}},System.Object[])">
+        <member name="M:Hyperlinq.H.audio(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.audio},System.Object[])">
             <summary>
             Defines sound content.
             </summary>
@@ -99,7 +105,7 @@
             Defines bold text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.b(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.b},Hyperlinq.IChain{Hyperlinq.HAttributes.b}},System.Object[])">
+        <member name="M:Hyperlinq.H.b(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.b},System.Object[])">
             <summary>
             Defines bold text.
             </summary>
@@ -109,7 +115,7 @@
             Specifies the base URL/target for all relative URLs in a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.base(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.base},Hyperlinq.IChain{Hyperlinq.HAttributes.base}},System.Object[])">
+        <member name="M:Hyperlinq.H.base(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.base},System.Object[])">
             <summary>
             Specifies the base URL/target for all relative URLs in a document.
             </summary>
@@ -119,7 +125,7 @@
             Not supported in HTML5. Deprecated in HTML 4.01. Specifies a default colour, size, and font for all text in a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.basefont(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.basefont},Hyperlinq.IChain{Hyperlinq.HAttributes.basefont}},System.Object[])">
+        <member name="M:Hyperlinq.H.basefont(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.basefont},System.Object[])">
             <summary>
             Not supported in HTML5. Deprecated in HTML 4.01. Specifies a default colour, size, and font for all text in a document.
             </summary>
@@ -129,7 +135,7 @@
             Isolates a part of text that might be formatted in a different direction from other text outside it.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.bdi(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.bdi},Hyperlinq.IChain{Hyperlinq.HAttributes.bdi}},System.Object[])">
+        <member name="M:Hyperlinq.H.bdi(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.bdi},System.Object[])">
             <summary>
             Isolates a part of text that might be formatted in a different direction from other text outside it.
             </summary>
@@ -139,7 +145,7 @@
             Overrides the current text direction.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.bdo(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.bdo},Hyperlinq.IChain{Hyperlinq.HAttributes.bdo}},System.Object[])">
+        <member name="M:Hyperlinq.H.bdo(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.bdo},System.Object[])">
             <summary>
             Overrides the current text direction.
             </summary>
@@ -149,7 +155,7 @@
             Not supported in HTML5. Defines big text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.big(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.big},Hyperlinq.IChain{Hyperlinq.HAttributes.big}},System.Object[])">
+        <member name="M:Hyperlinq.H.big(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.big},System.Object[])">
             <summary>
             Not supported in HTML5. Defines big text.
             </summary>
@@ -159,7 +165,7 @@
             Defines a section that is quoted from another source.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.blockquote(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.blockquote},Hyperlinq.IChain{Hyperlinq.HAttributes.blockquote}},System.Object[])">
+        <member name="M:Hyperlinq.H.blockquote(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.blockquote},System.Object[])">
             <summary>
             Defines a section that is quoted from another source.
             </summary>
@@ -169,7 +175,7 @@
             Defines the document's body.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.body(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.body},Hyperlinq.IChain{Hyperlinq.HAttributes.body}},System.Object[])">
+        <member name="M:Hyperlinq.H.body(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.body},System.Object[])">
             <summary>
             Defines the document's body.
             </summary>
@@ -179,7 +185,7 @@
             Defines a single line break.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.br(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.br},Hyperlinq.IChain{Hyperlinq.HAttributes.br}},System.Object[])">
+        <member name="M:Hyperlinq.H.br(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.br},System.Object[])">
             <summary>
             Defines a single line break.
             </summary>
@@ -189,7 +195,7 @@
             Used to draw graphics, on the fly, via scripting (usually JavaScript).
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.canvas(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.canvas},Hyperlinq.IChain{Hyperlinq.HAttributes.canvas}},System.Object[])">
+        <member name="M:Hyperlinq.H.canvas(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.canvas},System.Object[])">
             <summary>
             Used to draw graphics, on the fly, via scripting (usually JavaScript).
             </summary>
@@ -199,7 +205,7 @@
             Defines a table caption.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.caption(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.caption},Hyperlinq.IChain{Hyperlinq.HAttributes.caption}},System.Object[])">
+        <member name="M:Hyperlinq.H.caption(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.caption},System.Object[])">
             <summary>
             Defines a table caption.
             </summary>
@@ -209,7 +215,7 @@
             Not supported in HTML5. Deprecated in HTML 4.01. Defines centred text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.center(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.center},Hyperlinq.IChain{Hyperlinq.HAttributes.center}},System.Object[])">
+        <member name="M:Hyperlinq.H.center(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.center},System.Object[])">
             <summary>
             Not supported in HTML5. Deprecated in HTML 4.01. Defines centred text.
             </summary>
@@ -219,7 +225,7 @@
             Defines the title of a work.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.cite(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.cite},Hyperlinq.IChain{Hyperlinq.HAttributes.cite}},System.Object[])">
+        <member name="M:Hyperlinq.H.cite(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.cite},System.Object[])">
             <summary>
             Defines the title of a work.
             </summary>
@@ -229,19 +235,19 @@
             Defines a piece of computer code.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.code(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.code},Hyperlinq.IChain{Hyperlinq.HAttributes.code}},System.Object[])">
+        <member name="M:Hyperlinq.H.code(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.code},System.Object[])">
             <summary>
             Defines a piece of computer code.
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.col(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.col(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.col},Hyperlinq.IChain{Hyperlinq.HAttributes.col}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.col(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.col},System.Object[])" -->
         <member name="M:Hyperlinq.H.colgroup(System.Object[])">
             <summary>
             Specifies a group of one or more columns in a table for formatting.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.colgroup(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.colgroup},Hyperlinq.IChain{Hyperlinq.HAttributes.colgroup}},System.Object[])">
+        <member name="M:Hyperlinq.H.colgroup(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.colgroup},System.Object[])">
             <summary>
             Specifies a group of one or more columns in a table for formatting.
             </summary>
@@ -251,7 +257,7 @@
             Defines a command button that a user can invoke.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.command(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.command},Hyperlinq.IChain{Hyperlinq.HAttributes.command}},System.Object[])">
+        <member name="M:Hyperlinq.H.command(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.command},System.Object[])">
             <summary>
             Defines a command button that a user can invoke.
             </summary>
@@ -261,7 +267,7 @@
             Specifies a list of pre-defined options for input controls.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.datalist(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.datalist},Hyperlinq.IChain{Hyperlinq.HAttributes.datalist}},System.Object[])">
+        <member name="M:Hyperlinq.H.datalist(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.datalist},System.Object[])">
             <summary>
             Specifies a list of pre-defined options for input controls.
             </summary>
@@ -271,7 +277,7 @@
             Defines a description of an item in a definition list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.dd(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.dd},Hyperlinq.IChain{Hyperlinq.HAttributes.dd}},System.Object[])">
+        <member name="M:Hyperlinq.H.dd(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.dd},System.Object[])">
             <summary>
             Defines a description of an item in a definition list.
             </summary>
@@ -281,7 +287,7 @@
             Defines text that has been deleted from a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.del(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.del},Hyperlinq.IChain{Hyperlinq.HAttributes.del}},System.Object[])">
+        <member name="M:Hyperlinq.H.del(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.del},System.Object[])">
             <summary>
             Defines text that has been deleted from a document.
             </summary>
@@ -291,7 +297,7 @@
             Defines additional details that the user can view or hide.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.details(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.details},Hyperlinq.IChain{Hyperlinq.HAttributes.details}},System.Object[])">
+        <member name="M:Hyperlinq.H.details(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.details},System.Object[])">
             <summary>
             Defines additional details that the user can view or hide.
             </summary>
@@ -301,7 +307,7 @@
             Defines a definition term.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.dfn(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.dfn},Hyperlinq.IChain{Hyperlinq.HAttributes.dfn}},System.Object[])">
+        <member name="M:Hyperlinq.H.dfn(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.dfn},System.Object[])">
             <summary>
             Defines a definition term.
             </summary>
@@ -311,7 +317,7 @@
             Defines a dialog box or window.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.dialog(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.dialog},Hyperlinq.IChain{Hyperlinq.HAttributes.dialog}},System.Object[])">
+        <member name="M:Hyperlinq.H.dialog(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.dialog},System.Object[])">
             <summary>
             Defines a dialog box or window.
             </summary>
@@ -321,7 +327,7 @@
             Not supported in HTML5. Deprecated in HTML 4.01. Defines a directory list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.dir(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.dir},Hyperlinq.IChain{Hyperlinq.HAttributes.dir}},System.Object[])">
+        <member name="M:Hyperlinq.H.dir(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.dir},System.Object[])">
             <summary>
             Not supported in HTML5. Deprecated in HTML 4.01. Defines a directory list.
             </summary>
@@ -331,7 +337,7 @@
             Defines a section in a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.div(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.div},Hyperlinq.IChain{Hyperlinq.HAttributes.div}},System.Object[])">
+        <member name="M:Hyperlinq.H.div(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.div},System.Object[])">
             <summary>
             Defines a section in a document.
             </summary>
@@ -341,7 +347,7 @@
             Defines a definition list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.dl(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.dl},Hyperlinq.IChain{Hyperlinq.HAttributes.dl}},System.Object[])">
+        <member name="M:Hyperlinq.H.dl(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.dl},System.Object[])">
             <summary>
             Defines a definition list.
             </summary>
@@ -351,7 +357,7 @@
             Defines a term (an item) in a definition list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.dt(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.dt},Hyperlinq.IChain{Hyperlinq.HAttributes.dt}},System.Object[])">
+        <member name="M:Hyperlinq.H.dt(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.dt},System.Object[])">
             <summary>
             Defines a term (an item) in a definition list.
             </summary>
@@ -361,7 +367,7 @@
             Defines emphasized text .
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.em(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.em},Hyperlinq.IChain{Hyperlinq.HAttributes.em}},System.Object[])">
+        <member name="M:Hyperlinq.H.em(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.em},System.Object[])">
             <summary>
             Defines emphasized text .
             </summary>
@@ -371,7 +377,7 @@
             Defines a container for an external (non-HTML) application.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.embed(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.embed},Hyperlinq.IChain{Hyperlinq.HAttributes.embed}},System.Object[])">
+        <member name="M:Hyperlinq.H.embed(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.embed},System.Object[])">
             <summary>
             Defines a container for an external (non-HTML) application.
             </summary>
@@ -381,19 +387,19 @@
             Groups related elements in a form.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.fieldset(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.fieldset},Hyperlinq.IChain{Hyperlinq.HAttributes.fieldset}},System.Object[])">
+        <member name="M:Hyperlinq.H.fieldset(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.fieldset},System.Object[])">
             <summary>
             Groups related elements in a form.
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.figcaption(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.figcaption(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.figcaption},Hyperlinq.IChain{Hyperlinq.HAttributes.figcaption}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.figcaption(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.figcaption},System.Object[])" -->
         <member name="M:Hyperlinq.H.figure(System.Object[])">
             <summary>
             Specifies self-contained content.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.figure(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.figure},Hyperlinq.IChain{Hyperlinq.HAttributes.figure}},System.Object[])">
+        <member name="M:Hyperlinq.H.figure(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.figure},System.Object[])">
             <summary>
             Specifies self-contained content.
             </summary>
@@ -403,7 +409,7 @@
             Not supported in HTML5. Deprecated in HTML 4.01. Defines font, colour, and size for text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.font(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.font},Hyperlinq.IChain{Hyperlinq.HAttributes.font}},System.Object[])">
+        <member name="M:Hyperlinq.H.font(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.font},System.Object[])">
             <summary>
             Not supported in HTML5. Deprecated in HTML 4.01. Defines font, colour, and size for text.
             </summary>
@@ -413,7 +419,7 @@
             Defines a footer for a document or section.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.footer(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.footer},Hyperlinq.IChain{Hyperlinq.HAttributes.footer}},System.Object[])">
+        <member name="M:Hyperlinq.H.footer(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.footer},System.Object[])">
             <summary>
             Defines a footer for a document or section.
             </summary>
@@ -423,7 +429,7 @@
             Defines an HTML form for user input.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.form(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.form},Hyperlinq.IChain{Hyperlinq.HAttributes.form}},System.Object[])">
+        <member name="M:Hyperlinq.H.form(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.form},System.Object[])">
             <summary>
             Defines an HTML form for user input.
             </summary>
@@ -433,7 +439,7 @@
             Not supported in HTML5. Defines a window (a frame) in a frameset.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.frame(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.frame},Hyperlinq.IChain{Hyperlinq.HAttributes.frame}},System.Object[])">
+        <member name="M:Hyperlinq.H.frame(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.frame},System.Object[])">
             <summary>
             Not supported in HTML5. Defines a window (a frame) in a frameset.
             </summary>
@@ -443,7 +449,7 @@
             Not supported in HTML5. Defines a set of frames.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.frameset(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.frameset},Hyperlinq.IChain{Hyperlinq.HAttributes.frameset}},System.Object[])">
+        <member name="M:Hyperlinq.H.frameset(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.frameset},System.Object[])">
             <summary>
             Not supported in HTML5. Defines a set of frames.
             </summary>
@@ -453,7 +459,7 @@
             Defines HTML headings.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.h1(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.h1},Hyperlinq.IChain{Hyperlinq.HAttributes.h1}},System.Object[])">
+        <member name="M:Hyperlinq.H.h1(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.h1},System.Object[])">
             <summary>
             Defines HTML headings.
             </summary>
@@ -463,7 +469,7 @@
             Defines HTML headings.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.h2(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.h2},Hyperlinq.IChain{Hyperlinq.HAttributes.h2}},System.Object[])">
+        <member name="M:Hyperlinq.H.h2(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.h2},System.Object[])">
             <summary>
             Defines HTML headings.
             </summary>
@@ -473,7 +479,7 @@
             Defines HTML headings.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.h3(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.h3},Hyperlinq.IChain{Hyperlinq.HAttributes.h3}},System.Object[])">
+        <member name="M:Hyperlinq.H.h3(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.h3},System.Object[])">
             <summary>
             Defines HTML headings.
             </summary>
@@ -483,7 +489,7 @@
             Defines HTML headings.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.h4(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.h4},Hyperlinq.IChain{Hyperlinq.HAttributes.h4}},System.Object[])">
+        <member name="M:Hyperlinq.H.h4(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.h4},System.Object[])">
             <summary>
             Defines HTML headings.
             </summary>
@@ -493,7 +499,7 @@
             Defines HTML headings.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.h5(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.h5},Hyperlinq.IChain{Hyperlinq.HAttributes.h5}},System.Object[])">
+        <member name="M:Hyperlinq.H.h5(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.h5},System.Object[])">
             <summary>
             Defines HTML headings.
             </summary>
@@ -503,7 +509,7 @@
             Defines HTML headings.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.h6(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.h6},Hyperlinq.IChain{Hyperlinq.HAttributes.h6}},System.Object[])">
+        <member name="M:Hyperlinq.H.h6(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.h6},System.Object[])">
             <summary>
             Defines HTML headings.
             </summary>
@@ -513,7 +519,7 @@
             Defines information about the document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.head(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.head},Hyperlinq.IChain{Hyperlinq.HAttributes.head}},System.Object[])">
+        <member name="M:Hyperlinq.H.head(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.head},System.Object[])">
             <summary>
             Defines information about the document.
             </summary>
@@ -523,19 +529,19 @@
             Defines a header for a document or section.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.header(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.header},Hyperlinq.IChain{Hyperlinq.HAttributes.header}},System.Object[])">
+        <member name="M:Hyperlinq.H.header(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.header},System.Object[])">
             <summary>
             Defines a header for a document or section.
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.hgroup(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.hgroup(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.hgroup},Hyperlinq.IChain{Hyperlinq.HAttributes.hgroup}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.hgroup(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.hgroup},System.Object[])" -->
         <member name="M:Hyperlinq.H.hr(System.Object[])">
             <summary>
             Defines a thematic change in the content.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.hr(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.hr},Hyperlinq.IChain{Hyperlinq.HAttributes.hr}},System.Object[])">
+        <member name="M:Hyperlinq.H.hr(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.hr},System.Object[])">
             <summary>
             Defines a thematic change in the content.
             </summary>
@@ -545,7 +551,7 @@
             Defines the root of an HTML document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.html(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.html},Hyperlinq.IChain{Hyperlinq.HAttributes.html}},System.Object[])">
+        <member name="M:Hyperlinq.H.html(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.html},System.Object[])">
             <summary>
             Defines the root of an HTML document.
             </summary>
@@ -555,7 +561,7 @@
             Defines a part of text in an alternate voice or mood.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.i(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.i},Hyperlinq.IChain{Hyperlinq.HAttributes.i}},System.Object[])">
+        <member name="M:Hyperlinq.H.i(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.i},System.Object[])">
             <summary>
             Defines a part of text in an alternate voice or mood.
             </summary>
@@ -565,7 +571,7 @@
             Defines an inline frame.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.iframe(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.iframe},Hyperlinq.IChain{Hyperlinq.HAttributes.iframe}},System.Object[])">
+        <member name="M:Hyperlinq.H.iframe(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.iframe},System.Object[])">
             <summary>
             Defines an inline frame.
             </summary>
@@ -575,7 +581,7 @@
             Defines an image.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.img(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.img},Hyperlinq.IChain{Hyperlinq.HAttributes.img}},System.Object[])">
+        <member name="M:Hyperlinq.H.img(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.img},System.Object[])">
             <summary>
             Defines an image.
             </summary>
@@ -585,7 +591,7 @@
             Defines an input control.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.input(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.input},Hyperlinq.IChain{Hyperlinq.HAttributes.input}},System.Object[])">
+        <member name="M:Hyperlinq.H.input(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.input},System.Object[])">
             <summary>
             Defines an input control.
             </summary>
@@ -595,7 +601,7 @@
             Defines a text that has been inserted into a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.ins(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.ins},Hyperlinq.IChain{Hyperlinq.HAttributes.ins}},System.Object[])">
+        <member name="M:Hyperlinq.H.ins(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.ins},System.Object[])">
             <summary>
             Defines a text that has been inserted into a document.
             </summary>
@@ -605,7 +611,7 @@
             Defines keyboard input.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.kbd(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.kbd},Hyperlinq.IChain{Hyperlinq.HAttributes.kbd}},System.Object[])">
+        <member name="M:Hyperlinq.H.kbd(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.kbd},System.Object[])">
             <summary>
             Defines keyboard input.
             </summary>
@@ -615,21 +621,21 @@
             Defines a key-pair generator field (for forms).
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.keygen(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.keygen},Hyperlinq.IChain{Hyperlinq.HAttributes.keygen}},System.Object[])">
+        <member name="M:Hyperlinq.H.keygen(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.keygen},System.Object[])">
             <summary>
             Defines a key-pair generator field (for forms).
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.label(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.label(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.label},Hyperlinq.IChain{Hyperlinq.HAttributes.label}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.label(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.label},System.Object[])" -->
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.legend(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.legend(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.legend},Hyperlinq.IChain{Hyperlinq.HAttributes.legend}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.legend(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.legend},System.Object[])" -->
         <member name="M:Hyperlinq.H.li(System.Object[])">
             <summary>
             Defines a list item.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.li(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.li},Hyperlinq.IChain{Hyperlinq.HAttributes.li}},System.Object[])">
+        <member name="M:Hyperlinq.H.li(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.li},System.Object[])">
             <summary>
             Defines a list item.
             </summary>
@@ -639,7 +645,7 @@
             Defines the relationship between a document and an external resource (most used to link to style sheets).
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.link(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.link},Hyperlinq.IChain{Hyperlinq.HAttributes.link}},System.Object[])">
+        <member name="M:Hyperlinq.H.link(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.link},System.Object[])">
             <summary>
             Defines the relationship between a document and an external resource (most used to link to style sheets).
             </summary>
@@ -649,7 +655,7 @@
             Defines a client-side image-map.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.map(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.map},Hyperlinq.IChain{Hyperlinq.HAttributes.map}},System.Object[])">
+        <member name="M:Hyperlinq.H.map(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.map},System.Object[])">
             <summary>
             Defines a client-side image-map.
             </summary>
@@ -659,7 +665,7 @@
             Defines marked/highlighted text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.mark(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.mark},Hyperlinq.IChain{Hyperlinq.HAttributes.mark}},System.Object[])">
+        <member name="M:Hyperlinq.H.mark(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.mark},System.Object[])">
             <summary>
             Defines marked/highlighted text.
             </summary>
@@ -669,7 +675,7 @@
             Defines a list/menu of commands.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.menu(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.menu},Hyperlinq.IChain{Hyperlinq.HAttributes.menu}},System.Object[])">
+        <member name="M:Hyperlinq.H.menu(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.menu},System.Object[])">
             <summary>
             Defines a list/menu of commands.
             </summary>
@@ -679,7 +685,7 @@
             Defines metadata about an HTML document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.meta(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.meta},Hyperlinq.IChain{Hyperlinq.HAttributes.meta}},System.Object[])">
+        <member name="M:Hyperlinq.H.meta(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.meta},System.Object[])">
             <summary>
             Defines metadata about an HTML document.
             </summary>
@@ -689,7 +695,7 @@
             Defines a scalar measurement within a known range (a gauge).
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.meter(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.meter},Hyperlinq.IChain{Hyperlinq.HAttributes.meter}},System.Object[])">
+        <member name="M:Hyperlinq.H.meter(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.meter},System.Object[])">
             <summary>
             Defines a scalar measurement within a known range (a gauge).
             </summary>
@@ -699,7 +705,7 @@
             Defines navigation links.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.nav(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.nav},Hyperlinq.IChain{Hyperlinq.HAttributes.nav}},System.Object[])">
+        <member name="M:Hyperlinq.H.nav(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.nav},System.Object[])">
             <summary>
             Defines navigation links.
             </summary>
@@ -709,7 +715,7 @@
             Not supported in HTML5. Defines an alternate content for users that do not support frames.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.noframes(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.noframes},Hyperlinq.IChain{Hyperlinq.HAttributes.noframes}},System.Object[])">
+        <member name="M:Hyperlinq.H.noframes(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.noframes},System.Object[])">
             <summary>
             Not supported in HTML5. Defines an alternate content for users that do not support frames.
             </summary>
@@ -719,7 +725,7 @@
             Defines an alternate content for users that do not support client-side scripts.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.noscript(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.noscript},Hyperlinq.IChain{Hyperlinq.HAttributes.noscript}},System.Object[])">
+        <member name="M:Hyperlinq.H.noscript(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.noscript},System.Object[])">
             <summary>
             Defines an alternate content for users that do not support client-side scripts.
             </summary>
@@ -729,7 +735,7 @@
             Defines an embedded object.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.object(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.object},Hyperlinq.IChain{Hyperlinq.HAttributes.object}},System.Object[])">
+        <member name="M:Hyperlinq.H.object(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.object},System.Object[])">
             <summary>
             Defines an embedded object.
             </summary>
@@ -739,7 +745,7 @@
             Defines an ordered list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.ol(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.ol},Hyperlinq.IChain{Hyperlinq.HAttributes.ol}},System.Object[])">
+        <member name="M:Hyperlinq.H.ol(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.ol},System.Object[])">
             <summary>
             Defines an ordered list.
             </summary>
@@ -749,7 +755,7 @@
             Defines a group of related options in a drop-down list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.optgroup(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.optgroup},Hyperlinq.IChain{Hyperlinq.HAttributes.optgroup}},System.Object[])">
+        <member name="M:Hyperlinq.H.optgroup(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.optgroup},System.Object[])">
             <summary>
             Defines a group of related options in a drop-down list.
             </summary>
@@ -759,7 +765,7 @@
             Defines an option in a drop-down list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.option(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.option},Hyperlinq.IChain{Hyperlinq.HAttributes.option}},System.Object[])">
+        <member name="M:Hyperlinq.H.option(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.option},System.Object[])">
             <summary>
             Defines an option in a drop-down list.
             </summary>
@@ -769,7 +775,7 @@
             Defines the result of a calculation.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.output(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.output},Hyperlinq.IChain{Hyperlinq.HAttributes.output}},System.Object[])">
+        <member name="M:Hyperlinq.H.output(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.output},System.Object[])">
             <summary>
             Defines the result of a calculation.
             </summary>
@@ -779,7 +785,7 @@
             Defines a paragraph.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.p(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.p},Hyperlinq.IChain{Hyperlinq.HAttributes.p}},System.Object[])">
+        <member name="M:Hyperlinq.H.p(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.p},System.Object[])">
             <summary>
             Defines a paragraph.
             </summary>
@@ -789,7 +795,7 @@
             Defines a parameter for an object.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.param(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.param},Hyperlinq.IChain{Hyperlinq.HAttributes.param}},System.Object[])">
+        <member name="M:Hyperlinq.H.param(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.param},System.Object[])">
             <summary>
             Defines a parameter for an object.
             </summary>
@@ -799,7 +805,7 @@
             Defines pre-formatted text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.pre(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.pre},Hyperlinq.IChain{Hyperlinq.HAttributes.pre}},System.Object[])">
+        <member name="M:Hyperlinq.H.pre(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.pre},System.Object[])">
             <summary>
             Defines pre-formatted text.
             </summary>
@@ -809,7 +815,7 @@
             Represents the progress of a task.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.progress(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.progress},Hyperlinq.IChain{Hyperlinq.HAttributes.progress}},System.Object[])">
+        <member name="M:Hyperlinq.H.progress(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.progress},System.Object[])">
             <summary>
             Represents the progress of a task.
             </summary>
@@ -819,7 +825,7 @@
             Defines a short quotation.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.q(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.q},Hyperlinq.IChain{Hyperlinq.HAttributes.q}},System.Object[])">
+        <member name="M:Hyperlinq.H.q(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.q},System.Object[])">
             <summary>
             Defines a short quotation.
             </summary>
@@ -829,7 +835,7 @@
             Defines what to show in browsers that do not support ruby annotations.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.rp(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.rp},Hyperlinq.IChain{Hyperlinq.HAttributes.rp}},System.Object[])">
+        <member name="M:Hyperlinq.H.rp(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.rp},System.Object[])">
             <summary>
             Defines what to show in browsers that do not support ruby annotations.
             </summary>
@@ -839,7 +845,7 @@
             Defines an explanation/pronunciation of characters (for East Asian typography).
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.rt(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.rt},Hyperlinq.IChain{Hyperlinq.HAttributes.rt}},System.Object[])">
+        <member name="M:Hyperlinq.H.rt(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.rt},System.Object[])">
             <summary>
             Defines an explanation/pronunciation of characters (for East Asian typography).
             </summary>
@@ -849,7 +855,7 @@
             Defines a ruby annotation (for East Asian typography).
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.ruby(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.ruby},Hyperlinq.IChain{Hyperlinq.HAttributes.ruby}},System.Object[])">
+        <member name="M:Hyperlinq.H.ruby(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.ruby},System.Object[])">
             <summary>
             Defines a ruby annotation (for East Asian typography).
             </summary>
@@ -859,7 +865,7 @@
             Defines text that is no longer correct.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.s(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.s},Hyperlinq.IChain{Hyperlinq.HAttributes.s}},System.Object[])">
+        <member name="M:Hyperlinq.H.s(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.s},System.Object[])">
             <summary>
             Defines text that is no longer correct.
             </summary>
@@ -869,7 +875,7 @@
             Defines sample output from a computer program.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.samp(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.samp},Hyperlinq.IChain{Hyperlinq.HAttributes.samp}},System.Object[])">
+        <member name="M:Hyperlinq.H.samp(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.samp},System.Object[])">
             <summary>
             Defines sample output from a computer program.
             </summary>
@@ -879,7 +885,7 @@
             Defines a client-side script.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.script(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.script},Hyperlinq.IChain{Hyperlinq.HAttributes.script}},System.Object[])">
+        <member name="M:Hyperlinq.H.script(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.script},System.Object[])">
             <summary>
             Defines a client-side script.
             </summary>
@@ -889,7 +895,7 @@
             Defines a section in a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.section(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.section},Hyperlinq.IChain{Hyperlinq.HAttributes.section}},System.Object[])">
+        <member name="M:Hyperlinq.H.section(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.section},System.Object[])">
             <summary>
             Defines a section in a document.
             </summary>
@@ -899,7 +905,7 @@
             Defines a drop-down list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.select(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.select},Hyperlinq.IChain{Hyperlinq.HAttributes.select}},System.Object[])">
+        <member name="M:Hyperlinq.H.select(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.select},System.Object[])">
             <summary>
             Defines a drop-down list.
             </summary>
@@ -909,19 +915,19 @@
             Defines smaller text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.small(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.small},Hyperlinq.IChain{Hyperlinq.HAttributes.small}},System.Object[])">
+        <member name="M:Hyperlinq.H.small(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.small},System.Object[])">
             <summary>
             Defines smaller text.
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.source(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.source(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.source},Hyperlinq.IChain{Hyperlinq.HAttributes.source}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.source(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.source},System.Object[])" -->
         <member name="M:Hyperlinq.H.span(System.Object[])">
             <summary>
             Defines a section in a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.span(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.span},Hyperlinq.IChain{Hyperlinq.HAttributes.span}},System.Object[])">
+        <member name="M:Hyperlinq.H.span(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.span},System.Object[])">
             <summary>
             Defines a section in a document.
             </summary>
@@ -931,7 +937,7 @@
             Not supported in HTML5. Deprecated in HTML 4.01. Defines strike-through text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.strike(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.strike},Hyperlinq.IChain{Hyperlinq.HAttributes.strike}},System.Object[])">
+        <member name="M:Hyperlinq.H.strike(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.strike},System.Object[])">
             <summary>
             Not supported in HTML5. Deprecated in HTML 4.01. Defines strike-through text.
             </summary>
@@ -941,7 +947,7 @@
             Defines important text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.strong(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.strong},Hyperlinq.IChain{Hyperlinq.HAttributes.strong}},System.Object[])">
+        <member name="M:Hyperlinq.H.strong(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.strong},System.Object[])">
             <summary>
             Defines important text.
             </summary>
@@ -951,7 +957,7 @@
             Defines style information for a document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.style(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.style},Hyperlinq.IChain{Hyperlinq.HAttributes.style}},System.Object[])">
+        <member name="M:Hyperlinq.H.style(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.style},System.Object[])">
             <summary>
             Defines style information for a document.
             </summary>
@@ -961,19 +967,19 @@
             Defines subscripted text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.sub(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.sub},Hyperlinq.IChain{Hyperlinq.HAttributes.sub}},System.Object[])">
+        <member name="M:Hyperlinq.H.sub(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.sub},System.Object[])">
             <summary>
             Defines subscripted text.
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.summary(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.summary(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.summary},Hyperlinq.IChain{Hyperlinq.HAttributes.summary}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.summary(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.summary},System.Object[])" -->
         <member name="M:Hyperlinq.H.sup(System.Object[])">
             <summary>
             Defines superscripted text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.sup(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.sup},Hyperlinq.IChain{Hyperlinq.HAttributes.sup}},System.Object[])">
+        <member name="M:Hyperlinq.H.sup(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.sup},System.Object[])">
             <summary>
             Defines superscripted text.
             </summary>
@@ -983,7 +989,7 @@
             Defines a table.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.table(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.table},Hyperlinq.IChain{Hyperlinq.HAttributes.table}},System.Object[])">
+        <member name="M:Hyperlinq.H.table(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.table},System.Object[])">
             <summary>
             Defines a table.
             </summary>
@@ -993,7 +999,7 @@
             Groups the body content in a table.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.tbody(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.tbody},Hyperlinq.IChain{Hyperlinq.HAttributes.tbody}},System.Object[])">
+        <member name="M:Hyperlinq.H.tbody(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.tbody},System.Object[])">
             <summary>
             Groups the body content in a table.
             </summary>
@@ -1003,7 +1009,7 @@
             Defines a cell in a table.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.td(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.td},Hyperlinq.IChain{Hyperlinq.HAttributes.td}},System.Object[])">
+        <member name="M:Hyperlinq.H.td(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.td},System.Object[])">
             <summary>
             Defines a cell in a table.
             </summary>
@@ -1013,7 +1019,7 @@
             Defines a multi-line input control (text area).
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.textarea(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.textarea},Hyperlinq.IChain{Hyperlinq.HAttributes.textarea}},System.Object[])">
+        <member name="M:Hyperlinq.H.textarea(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.textarea},System.Object[])">
             <summary>
             Defines a multi-line input control (text area).
             </summary>
@@ -1023,7 +1029,7 @@
             Groups the footer content in a table.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.tfoot(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.tfoot},Hyperlinq.IChain{Hyperlinq.HAttributes.tfoot}},System.Object[])">
+        <member name="M:Hyperlinq.H.tfoot(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.tfoot},System.Object[])">
             <summary>
             Groups the footer content in a table.
             </summary>
@@ -1033,7 +1039,7 @@
             Defines a header cell in a table.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.th(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.th},Hyperlinq.IChain{Hyperlinq.HAttributes.th}},System.Object[])">
+        <member name="M:Hyperlinq.H.th(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.th},System.Object[])">
             <summary>
             Defines a header cell in a table.
             </summary>
@@ -1043,7 +1049,7 @@
             Groups the header content in a table.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.thead(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.thead},Hyperlinq.IChain{Hyperlinq.HAttributes.thead}},System.Object[])">
+        <member name="M:Hyperlinq.H.thead(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.thead},System.Object[])">
             <summary>
             Groups the header content in a table.
             </summary>
@@ -1053,7 +1059,7 @@
             Defines a date/time.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.time(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.time},Hyperlinq.IChain{Hyperlinq.HAttributes.time}},System.Object[])">
+        <member name="M:Hyperlinq.H.time(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.time},System.Object[])">
             <summary>
             Defines a date/time.
             </summary>
@@ -1063,7 +1069,7 @@
             Defines a title for the document.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.title(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.title},Hyperlinq.IChain{Hyperlinq.HAttributes.title}},System.Object[])">
+        <member name="M:Hyperlinq.H.title(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.title},System.Object[])">
             <summary>
             Defines a title for the document.
             </summary>
@@ -1073,19 +1079,19 @@
             Defines a row in a table.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.tr(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.tr},Hyperlinq.IChain{Hyperlinq.HAttributes.tr}},System.Object[])">
+        <member name="M:Hyperlinq.H.tr(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.tr},System.Object[])">
             <summary>
             Defines a row in a table.
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.track(System.Object[])" -->
-        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.track(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.track},Hyperlinq.IChain{Hyperlinq.HAttributes.track}},System.Object[])" -->
+        <!-- Badly formed XML comment ignored for member "M:Hyperlinq.H.track(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.track},System.Object[])" -->
         <member name="M:Hyperlinq.H.tt(System.Object[])">
             <summary>
             Not supported in HTML5. Defines Teletype text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.tt(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.tt},Hyperlinq.IChain{Hyperlinq.HAttributes.tt}},System.Object[])">
+        <member name="M:Hyperlinq.H.tt(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.tt},System.Object[])">
             <summary>
             Not supported in HTML5. Defines Teletype text.
             </summary>
@@ -1095,7 +1101,7 @@
             Defines text that should be stylistically different from normal text.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.u(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.u},Hyperlinq.IChain{Hyperlinq.HAttributes.u}},System.Object[])">
+        <member name="M:Hyperlinq.H.u(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.u},System.Object[])">
             <summary>
             Defines text that should be stylistically different from normal text.
             </summary>
@@ -1105,7 +1111,7 @@
             Defines an unordered list.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.ul(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.ul},Hyperlinq.IChain{Hyperlinq.HAttributes.ul}},System.Object[])">
+        <member name="M:Hyperlinq.H.ul(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.ul},System.Object[])">
             <summary>
             Defines an unordered list.
             </summary>
@@ -1115,7 +1121,7 @@
             Defines a variable.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.var(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.var},Hyperlinq.IChain{Hyperlinq.HAttributes.var}},System.Object[])">
+        <member name="M:Hyperlinq.H.var(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.var},System.Object[])">
             <summary>
             Defines a variable.
             </summary>
@@ -1125,7 +1131,7 @@
             Defines a video or movie.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.video(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.video},Hyperlinq.IChain{Hyperlinq.HAttributes.video}},System.Object[])">
+        <member name="M:Hyperlinq.H.video(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.video},System.Object[])">
             <summary>
             Defines a video or movie.
             </summary>
@@ -1135,7 +1141,7 @@
             Defines a possible line-break.
             </summary>
         </member>
-        <member name="M:Hyperlinq.H.wbr(System.Func{Hyperlinq.IChain{Hyperlinq.HAttributes.wbr},Hyperlinq.IChain{Hyperlinq.HAttributes.wbr}},System.Object[])">
+        <member name="M:Hyperlinq.H.wbr(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.wbr},System.Object[])">
             <summary>
             Defines a possible line-break.
             </summary>
