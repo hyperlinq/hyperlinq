@@ -5,14 +5,6 @@ FAQ: https://github.com/hyperlinq/hyperlinq/wiki/FAQ
 
 Blog: http://hyperlinq.blogspot.co.uk/
 
-The NancyHyperlinq project demos Hyperlinq with NancyFx. NancyFx is a "low ceremony" alternative to MVC.
-
-NancyHyperlinq Demo Project:
-https://github.com/hyperlinq/hyperlinq/tree/master/NancyHyperlinqDemo
-
-NancyFx:
-http://nancyfx.org/
-
 Hyperlinq on Nuget:
 https://www.nuget.org/packages/Hyperlinq
 

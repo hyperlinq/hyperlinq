@@ -31,7 +31,7 @@ namespace Hyperlinq
             if (children != null)
                 this.Children = children.SelectMany (c =>
                     c is HNode ? new[] { (HNode)c } :
-                    c is IEnumerable<HNode> ? (IEnumerable<HNode>)c :
+                    c is IEnumerable<HNode> ? (IEnumerable<HNode>)c :                    
                     c == null ? new HNode[0] :
                     new[] { new HText (c.ToString ()) });
         }
@@ -52,19 +52,18 @@ namespace Hyperlinq
         }
     }
 
-
     public class HElement : HNode
     {
         static readonly string[] EmptyTags = new[] { "area","base","basefont","br","col","frame","hr","img","input","isindex","link","meta","param","source"};
         public readonly string Name;
         public readonly IEnumerable<HAttribute> Attributes;
 
-        public HElement (string name, IChain<HAttribute> attributes, IEnumerable<object> children)
-            : base (children)
+        public HElement (string name, IChain<HAttribute> attributes, IEnumerable<object> children) : base (children)
         {
             this.Name = name;
+
             if (attributes != null)
-                this.Attributes = attributes.ToEnumerable ();
+                Attributes = attributes.ToEnumerable ().Where (a => a.Value != null).ToArray ();
 
             Validate ();
         }
@@ -76,8 +75,8 @@ namespace Hyperlinq
 
             if (Attributes != null)
             {
-                if (this.Attributes.Any (a => a.Name == null || a.Value == null))
-                    throw new InvalidOperationException (string.Format ("Element '{0}' has attributes with null names or values", Name));
+                if (this.Attributes.Any (a => a.Name == null))
+                    throw new InvalidOperationException (string.Format ("Element '{0}' has attributes with null names", Name));
 
                 var attributeNames = this.Attributes.Select(a => a.Name);
                 if (attributeNames.Distinct().Count () != attributeNames.Count ())
@@ -157,7 +156,7 @@ namespace Hyperlinq
 
         public HAttribute (string name, object value) { this.Name = name; this.Value = value; }
 
-        public virtual HAttribute Create (string name, object value) { throw new InvalidOperationException (); }
+        public virtual HAttribute Create (string name, object value) { return new HAttribute (name, value); }
 
         public override XObject ToXml ()
         {

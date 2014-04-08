@@ -31,6 +31,8 @@ namespace Hyperlinq
         }
     }
 
+    public delegate IChain<T> ChainFunc<T> (IChain<T> func);
+
     public static class ChainExtensions
     {    
         public static IChain<T> Join<T> (this IChain<T> x, IChain<T> y)
@@ -46,9 +48,9 @@ namespace Hyperlinq
             return x.Join (new Chain<T> (new[] { y }));
         }
 
-        public static IChain<T> Join<T> (this IChain<T> x, Func<IChain<T>,IChain<T>> funcY)
+        public static IChain<T> Join<T> (this IChain<T> x, ChainFunc<T> func)
         {
-            return x.Join (funcY == null ? null : funcY(null));
+            return x.Join (func == null ? null : func (null));
         }
     }
 

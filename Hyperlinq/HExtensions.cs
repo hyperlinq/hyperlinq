@@ -17,6 +17,11 @@ namespace Hyperlinq
              return attributes.Join ((T) new T().Create(name, value));
         }
 
+        public static IChain<T> Custom<T> (this IChain<T> attributes, HAttribute attribute) where T : HAttribute, new ()
+        {
+            return attributes.Join ((T) new T ().Create (attribute.Name, attribute.Value));
+        }
+
         public static IChain<T> href<T> (this IChain<T> attributes, Expression<Action> action) where T : HAttribute, IhrefAttribute, new()
         {
             return attributes.href (Url (action));

@@ -9,13 +9,15 @@ using System.Xml.Linq;
 
 namespace Hyperlinq
 {
+    // work in progress.
+
     public abstract class HInput
     {
         public string Label;       
         public object Value;
         public string Id;
         public Type DataType;
-    
+            
         public abstract HElement Render ();
 
         public HInput (Expression<Func<object>> idExpression, string label = null)
@@ -32,32 +34,59 @@ namespace Hyperlinq
             var body = expression.Body is UnaryExpression ? ((UnaryExpression)expression.Body).Operand : expression.Body;
             return ((MemberExpression)body).Member;
         }
-
     }
 
-    public class TextInput : HInput
+    public abstract class HInput<TAttribute> : HInput
     {
-        public TextInput (Expression<Func<object>> idExpression, string label = null) : base (idExpression, label) { }
+        public ChainFunc<TAttribute> extraAttributes;
 
-        public override HElement Render ()
+        public HInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<TAttribute> extraAttributes = null) :
+            base (idExpression, label)
         {
-            return H.input (a => a.type ("text").id (Id).name (Id), Value);
+            this.extraAttributes = extraAttributes;
         }
     }
 
-    public class NumericInput : HInput
+    public class TextInput : HInput<HAttributes.input>
     {
-        public NumericInput (Expression<Func<object>> idExpression, string label = null) : base (idExpression, label) { }
-
+        public TextInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.input> attributes = null)
+            : base (idExpression, label, attributes) { }
+       
         public override HElement Render ()
         {
-            return H.input (a => a.type ("text").id (Id).name (Id), Value);
+            return H.input (a => a.type ("text").id (Id).name (Id).value (Value).Merge(extraAttributes));
         }
     }
 
-    public class RadioButtonInput : HInput
+    public class TextAreaInput : HInput<HAttributes.textarea>
     {
-        public RadioButtonInput (Expression<Func<object>> idExpression, string label = null) : base (idExpression, label) { }
+        public TextAreaInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.textarea> attributes = null)
+            : base (idExpression, label, attributes)
+        { }
+
+        public override HElement Render ()
+        {
+            return H.textarea (a => a.id (Id).name (Id).Merge(extraAttributes), Value);
+        }
+    }
+
+    public class NumericInput : HInput<HAttributes.input>
+    {
+        public NumericInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.input> attributes = null)
+            : base (idExpression, label, attributes)
+        { }
+
+        public override HElement Render ()
+        {
+            return H.input (a => a.type ("number").id (Id).name (Id).value(Value).Merge(extraAttributes));
+        }
+    }
+
+    public class RadioButtonInput : HInput<HAttributes.input>
+    {
+        public RadioButtonInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.input> attributes = null)
+            : base (idExpression, label, attributes)
+        { }
 
         public override HElement Render ()
         {
@@ -65,60 +94,99 @@ namespace Hyperlinq
             var options = Enum.GetNames(nonNullableType).Zip(Enum.GetValues(nonNullableType).Cast<object>(), (name, value) => new { name, value });
             return
                 H.div (
-                    options.Select (option => H.div (
-                        H.input (a => a.type ("radio").name(Id).value ("" + option.value), option.name)
-                    ))
+                    from option in options
+                    let checkedValue = object.Equals (option.value, Value) ? "checked" : null 
+                    select H.div
+                    (
+                        H.input (a => a.type ("radio").name (Id).value ("" + option.value).@checked (checkedValue).Merge(extraAttributes), option.name)
+                    )
                 );
         }
     }
 
-    public class CheckboxInput : HInput
+    public class DropDownInput : HInput<HAttributes.select>
     {
-        public CheckboxInput (Expression<Func<object>> idExpression, string label = null) : base (idExpression, label) { }
+        public DropDownInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.select> attributes = null)
+            : base (idExpression, label, attributes)
+        { }
 
         public override HElement Render ()
         {
-            return H.input (a => a.type ("checkbox").id (Id).name (Id), Value);
+            var nonNullableType = DataType.GetNonNullableType ();
+            var options = Enum.GetNames (nonNullableType).Zip (Enum.GetValues (nonNullableType).Cast<object> (), (name, value) => new { name, value });
+
+            var placeholder = Value != null ? new HElement[0] :
+                new[] {H.option (a => a.value ("").disabled (true).selected (true).style ("display:none"), Label)};
+
+            return
+                H.select (a => a.name(Id).Merge(extraAttributes),
+                    placeholder.Concat
+                    (
+                        from option in options
+                        let selectedValue = object.Equals (option.value, Value) ? "true" : null
+                        select H.div
+                        (
+                            H.option (a => a.value ("" + option.value).selected(selectedValue), option.name)
+                        )
+                    )
+                );
         }
     }
 
-    public class HiddenInput : HInput
+    public class CheckboxInput : HInput<HAttributes.input>
     {
-        public HiddenInput (Expression<Func<object>> idExpression) : base (idExpression, null) { }
+        public CheckboxInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.input> attributes = null)
+            : base (idExpression, label, attributes)
+        { }
 
         public override HElement Render ()
         {
-            return H.input (a => a.type ("hidden").id (Id).name (Id).value(Value));
+            return H.input (a => a.type ("checkbox").id (Id).name (Id).value(Value).Merge(extraAttributes));
         }
     }
 
-    public class PasswordInput : HInput
+    public class HiddenInput : HInput<HAttributes.input>
     {
-        public PasswordInput (Expression<Func<object>> idExpression, string label = null) : base (idExpression, label) { }
+        public HiddenInput (Expression<Func<object>> idExpression, ChainFunc<HAttributes.input> attributes = null)
+            : base (idExpression, null, attributes)
+        { }
 
         public override HElement Render ()
         {
-            return H.input (a => a.type ("password").id (Id).name (Id), Value);
+            return H.input (a => a.type ("hidden").id (Id).name (Id).value(Value).Merge(extraAttributes));
         }
     }
 
-    public class DateInput : HInput
+    public class PasswordInput : HInput<HAttributes.input>
     {
-        public DateInput (Expression<Func<object>> idExpression, string label = null) : base (idExpression, label) { }
+        public PasswordInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.input> attributes = null) : base (idExpression, label, attributes) { }
 
         public override HElement Render ()
         {
-            return H.input (a => a.type ("text").id (Id).name (Id), Value);
+            return H.input (a => a.type ("password").id (Id).name (Id).value(Value).Merge (extraAttributes));
         }
     }
 
-    public class FileInput : HInput
+    public class DateInput : HInput<HAttributes.input>
     {
-        public FileInput (Expression<Func<object>> idExpression, string label = null) : base (idExpression, label) { }
+        public DateInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.input> attributes = null)
+            : base (idExpression, label, attributes)
+        { }
+
+        public override HElement Render ()
+        {
+            var value = object.Equals (Value, default (DateTime)) ? null : ((DateTime)Value).ToString ("dd MMM yyyy");
+            return H.input(a => a.type("text").id(Id).name(Id).value(value).Merge(extraAttributes));
+        }
+    }
+
+    public class FileInput : HInput<HAttributes.input>
+    {
+        public FileInput (Expression<Func<object>> idExpression, string label = null, ChainFunc<HAttributes.input> attributes = null) : base (idExpression, label, attributes) { }
 
         public override HElement Render ()
         {  
-            return H.input (a => a.type ("file").id (Id).name (Id), Value);
+            return H.input (a => a.type ("file").id (Id).name (Id).value(Value).Merge (extraAttributes));
         }
     }
 }

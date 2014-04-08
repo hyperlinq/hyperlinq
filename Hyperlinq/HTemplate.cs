@@ -19,7 +19,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a hyperlink.
         /// </summary>
-		public static HElement a (Func<IChain<HAttributes.a>, IChain<HAttributes.a>> attributes, params object[] children) { return new HElement ("a", attributes (null), children); }        
+		public static HElement a (ChainFunc<HAttributes.a> attributes, params object[] children) { return new HElement ("a", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an abbreviation.
@@ -30,7 +30,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an abbreviation.
         /// </summary>
-		public static HElement abbr (Func<IChain<HAttributes.abbr>, IChain<HAttributes.abbr>> attributes, params object[] children) { return new HElement ("abbr", attributes (null), children); }        
+		public static HElement abbr (ChainFunc<HAttributes.abbr> attributes, params object[] children) { return new HElement ("abbr", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Defines an acronym.
@@ -41,7 +41,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Defines an acronym.
         /// </summary>
-		public static HElement acronym (Func<IChain<HAttributes.acronym>, IChain<HAttributes.acronym>> attributes, params object[] children) { return new HElement ("acronym", attributes (null), children); }        
+		public static HElement acronym (ChainFunc<HAttributes.acronym> attributes, params object[] children) { return new HElement ("acronym", attributes (null), children); }        
 
 		/// <summary>
         /// Defines contact information for the author/owner of a document.
@@ -52,7 +52,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines contact information for the author/owner of a document.
         /// </summary>
-		public static HElement address (Func<IChain<HAttributes.address>, IChain<HAttributes.address>> attributes, params object[] children) { return new HElement ("address", attributes (null), children); }        
+		public static HElement address (ChainFunc<HAttributes.address> attributes, params object[] children) { return new HElement ("address", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines an embedded applet.
@@ -63,7 +63,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines an embedded applet.
         /// </summary>
-		public static HElement applet (Func<IChain<HAttributes.applet>, IChain<HAttributes.applet>> attributes, params object[] children) { return new HElement ("applet", attributes (null), children); }        
+		public static HElement applet (ChainFunc<HAttributes.applet> attributes, params object[] children) { return new HElement ("applet", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an area inside an image-map.
@@ -74,7 +74,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an area inside an image-map.
         /// </summary>
-		public static HElement area (Func<IChain<HAttributes.area>, IChain<HAttributes.area>> attributes, params object[] children) { return new HElement ("area", attributes (null), children); }        
+		public static HElement area (ChainFunc<HAttributes.area> attributes, params object[] children) { return new HElement ("area", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an article.
@@ -85,7 +85,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an article.
         /// </summary>
-		public static HElement article (Func<IChain<HAttributes.article>, IChain<HAttributes.article>> attributes, params object[] children) { return new HElement ("article", attributes (null), children); }        
+		public static HElement article (ChainFunc<HAttributes.article> attributes, params object[] children) { return new HElement ("article", attributes (null), children); }        
 
 		/// <summary>
         /// Defines content aside from the page content.
@@ -96,7 +96,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines content aside from the page content.
         /// </summary>
-		public static HElement aside (Func<IChain<HAttributes.aside>, IChain<HAttributes.aside>> attributes, params object[] children) { return new HElement ("aside", attributes (null), children); }        
+		public static HElement aside (ChainFunc<HAttributes.aside> attributes, params object[] children) { return new HElement ("aside", attributes (null), children); }        
 
 		/// <summary>
         /// Defines sound content.
@@ -107,7 +107,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines sound content.
         /// </summary>
-		public static HElement audio (Func<IChain<HAttributes.audio>, IChain<HAttributes.audio>> attributes, params object[] children) { return new HElement ("audio", attributes (null), children); }        
+		public static HElement audio (ChainFunc<HAttributes.audio> attributes, params object[] children) { return new HElement ("audio", attributes (null), children); }        
 
 		/// <summary>
         /// Defines bold text.
@@ -118,7 +118,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines bold text.
         /// </summary>
-		public static HElement b (Func<IChain<HAttributes.b>, IChain<HAttributes.b>> attributes, params object[] children) { return new HElement ("b", attributes (null), children); }        
+		public static HElement b (ChainFunc<HAttributes.b> attributes, params object[] children) { return new HElement ("b", attributes (null), children); }        
 
 		/// <summary>
         /// Specifies the base URL/target for all relative URLs in a document.
@@ -129,7 +129,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Specifies the base URL/target for all relative URLs in a document.
         /// </summary>
-		public static HElement @base (Func<IChain<HAttributes.@base>, IChain<HAttributes.@base>> attributes, params object[] children) { return new HElement ("base", attributes (null), children); }        
+		public static HElement @base (ChainFunc<HAttributes.@base> attributes, params object[] children) { return new HElement ("base", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Specifies a default colour, size, and font for all text in a document.
@@ -140,7 +140,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Specifies a default colour, size, and font for all text in a document.
         /// </summary>
-		public static HElement basefont (Func<IChain<HAttributes.basefont>, IChain<HAttributes.basefont>> attributes, params object[] children) { return new HElement ("basefont", attributes (null), children); }        
+		public static HElement basefont (ChainFunc<HAttributes.basefont> attributes, params object[] children) { return new HElement ("basefont", attributes (null), children); }        
 
 		/// <summary>
         /// Isolates a part of text that might be formatted in a different direction from other text outside it.
@@ -151,7 +151,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Isolates a part of text that might be formatted in a different direction from other text outside it.
         /// </summary>
-		public static HElement bdi (Func<IChain<HAttributes.bdi>, IChain<HAttributes.bdi>> attributes, params object[] children) { return new HElement ("bdi", attributes (null), children); }        
+		public static HElement bdi (ChainFunc<HAttributes.bdi> attributes, params object[] children) { return new HElement ("bdi", attributes (null), children); }        
 
 		/// <summary>
         /// Overrides the current text direction.
@@ -162,7 +162,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Overrides the current text direction.
         /// </summary>
-		public static HElement bdo (Func<IChain<HAttributes.bdo>, IChain<HAttributes.bdo>> attributes, params object[] children) { return new HElement ("bdo", attributes (null), children); }        
+		public static HElement bdo (ChainFunc<HAttributes.bdo> attributes, params object[] children) { return new HElement ("bdo", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Defines big text.
@@ -173,7 +173,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Defines big text.
         /// </summary>
-		public static HElement big (Func<IChain<HAttributes.big>, IChain<HAttributes.big>> attributes, params object[] children) { return new HElement ("big", attributes (null), children); }        
+		public static HElement big (ChainFunc<HAttributes.big> attributes, params object[] children) { return new HElement ("big", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a section that is quoted from another source.
@@ -184,7 +184,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a section that is quoted from another source.
         /// </summary>
-		public static HElement blockquote (Func<IChain<HAttributes.blockquote>, IChain<HAttributes.blockquote>> attributes, params object[] children) { return new HElement ("blockquote", attributes (null), children); }        
+		public static HElement blockquote (ChainFunc<HAttributes.blockquote> attributes, params object[] children) { return new HElement ("blockquote", attributes (null), children); }        
 
 		/// <summary>
         /// Defines the document's body.
@@ -195,7 +195,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines the document's body.
         /// </summary>
-		public static HElement body (Func<IChain<HAttributes.body>, IChain<HAttributes.body>> attributes, params object[] children) { return new HElement ("body", attributes (null), children); }        
+		public static HElement body (ChainFunc<HAttributes.body> attributes, params object[] children) { return new HElement ("body", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a single line break.
@@ -206,7 +206,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a single line break.
         /// </summary>
-		public static HElement br (Func<IChain<HAttributes.br>, IChain<HAttributes.br>> attributes, params object[] children) { return new HElement ("br", attributes (null), children); }        
+		public static HElement br (ChainFunc<HAttributes.br> attributes, params object[] children) { return new HElement ("br", attributes (null), children); }        
 
 		/// <summary>
         /// Used to draw graphics, on the fly, via scripting (usually JavaScript).
@@ -217,7 +217,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Used to draw graphics, on the fly, via scripting (usually JavaScript).
         /// </summary>
-		public static HElement canvas (Func<IChain<HAttributes.canvas>, IChain<HAttributes.canvas>> attributes, params object[] children) { return new HElement ("canvas", attributes (null), children); }        
+		public static HElement canvas (ChainFunc<HAttributes.canvas> attributes, params object[] children) { return new HElement ("canvas", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a table caption.
@@ -228,7 +228,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a table caption.
         /// </summary>
-		public static HElement caption (Func<IChain<HAttributes.caption>, IChain<HAttributes.caption>> attributes, params object[] children) { return new HElement ("caption", attributes (null), children); }        
+		public static HElement caption (ChainFunc<HAttributes.caption> attributes, params object[] children) { return new HElement ("caption", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines centred text.
@@ -239,7 +239,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines centred text.
         /// </summary>
-		public static HElement center (Func<IChain<HAttributes.center>, IChain<HAttributes.center>> attributes, params object[] children) { return new HElement ("center", attributes (null), children); }        
+		public static HElement center (ChainFunc<HAttributes.center> attributes, params object[] children) { return new HElement ("center", attributes (null), children); }        
 
 		/// <summary>
         /// Defines the title of a work.
@@ -250,7 +250,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines the title of a work.
         /// </summary>
-		public static HElement cite (Func<IChain<HAttributes.cite>, IChain<HAttributes.cite>> attributes, params object[] children) { return new HElement ("cite", attributes (null), children); }        
+		public static HElement cite (ChainFunc<HAttributes.cite> attributes, params object[] children) { return new HElement ("cite", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a piece of computer code.
@@ -261,7 +261,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a piece of computer code.
         /// </summary>
-		public static HElement code (Func<IChain<HAttributes.code>, IChain<HAttributes.code>> attributes, params object[] children) { return new HElement ("code", attributes (null), children); }        
+		public static HElement code (ChainFunc<HAttributes.code> attributes, params object[] children) { return new HElement ("code", attributes (null), children); }        
 
 		/// <summary>
         /// Specifies column properties for each column within a <colgroup> element .
@@ -272,7 +272,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Specifies column properties for each column within a <colgroup> element .
         /// </summary>
-		public static HElement col (Func<IChain<HAttributes.col>, IChain<HAttributes.col>> attributes, params object[] children) { return new HElement ("col", attributes (null), children); }        
+		public static HElement col (ChainFunc<HAttributes.col> attributes, params object[] children) { return new HElement ("col", attributes (null), children); }        
 
 		/// <summary>
         /// Specifies a group of one or more columns in a table for formatting.
@@ -283,7 +283,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Specifies a group of one or more columns in a table for formatting.
         /// </summary>
-		public static HElement colgroup (Func<IChain<HAttributes.colgroup>, IChain<HAttributes.colgroup>> attributes, params object[] children) { return new HElement ("colgroup", attributes (null), children); }        
+		public static HElement colgroup (ChainFunc<HAttributes.colgroup> attributes, params object[] children) { return new HElement ("colgroup", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a command button that a user can invoke.
@@ -294,7 +294,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a command button that a user can invoke.
         /// </summary>
-		public static HElement command (Func<IChain<HAttributes.command>, IChain<HAttributes.command>> attributes, params object[] children) { return new HElement ("command", attributes (null), children); }        
+		public static HElement command (ChainFunc<HAttributes.command> attributes, params object[] children) { return new HElement ("command", attributes (null), children); }        
 
 		/// <summary>
         /// Specifies a list of pre-defined options for input controls.
@@ -305,7 +305,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Specifies a list of pre-defined options for input controls.
         /// </summary>
-		public static HElement datalist (Func<IChain<HAttributes.datalist>, IChain<HAttributes.datalist>> attributes, params object[] children) { return new HElement ("datalist", attributes (null), children); }        
+		public static HElement datalist (ChainFunc<HAttributes.datalist> attributes, params object[] children) { return new HElement ("datalist", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a description of an item in a definition list.
@@ -316,7 +316,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a description of an item in a definition list.
         /// </summary>
-		public static HElement dd (Func<IChain<HAttributes.dd>, IChain<HAttributes.dd>> attributes, params object[] children) { return new HElement ("dd", attributes (null), children); }        
+		public static HElement dd (ChainFunc<HAttributes.dd> attributes, params object[] children) { return new HElement ("dd", attributes (null), children); }        
 
 		/// <summary>
         /// Defines text that has been deleted from a document.
@@ -327,7 +327,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines text that has been deleted from a document.
         /// </summary>
-		public static HElement del (Func<IChain<HAttributes.del>, IChain<HAttributes.del>> attributes, params object[] children) { return new HElement ("del", attributes (null), children); }        
+		public static HElement del (ChainFunc<HAttributes.del> attributes, params object[] children) { return new HElement ("del", attributes (null), children); }        
 
 		/// <summary>
         /// Defines additional details that the user can view or hide.
@@ -338,7 +338,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines additional details that the user can view or hide.
         /// </summary>
-		public static HElement details (Func<IChain<HAttributes.details>, IChain<HAttributes.details>> attributes, params object[] children) { return new HElement ("details", attributes (null), children); }        
+		public static HElement details (ChainFunc<HAttributes.details> attributes, params object[] children) { return new HElement ("details", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a definition term.
@@ -349,7 +349,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a definition term.
         /// </summary>
-		public static HElement dfn (Func<IChain<HAttributes.dfn>, IChain<HAttributes.dfn>> attributes, params object[] children) { return new HElement ("dfn", attributes (null), children); }        
+		public static HElement dfn (ChainFunc<HAttributes.dfn> attributes, params object[] children) { return new HElement ("dfn", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a dialog box or window.
@@ -360,7 +360,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a dialog box or window.
         /// </summary>
-		public static HElement dialog (Func<IChain<HAttributes.dialog>, IChain<HAttributes.dialog>> attributes, params object[] children) { return new HElement ("dialog", attributes (null), children); }        
+		public static HElement dialog (ChainFunc<HAttributes.dialog> attributes, params object[] children) { return new HElement ("dialog", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines a directory list.
@@ -371,7 +371,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines a directory list.
         /// </summary>
-		public static HElement dir (Func<IChain<HAttributes.dir>, IChain<HAttributes.dir>> attributes, params object[] children) { return new HElement ("dir", attributes (null), children); }        
+		public static HElement dir (ChainFunc<HAttributes.dir> attributes, params object[] children) { return new HElement ("dir", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a section in a document.
@@ -382,7 +382,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a section in a document.
         /// </summary>
-		public static HElement div (Func<IChain<HAttributes.div>, IChain<HAttributes.div>> attributes, params object[] children) { return new HElement ("div", attributes (null), children); }        
+		public static HElement div (ChainFunc<HAttributes.div> attributes, params object[] children) { return new HElement ("div", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a definition list.
@@ -393,7 +393,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a definition list.
         /// </summary>
-		public static HElement dl (Func<IChain<HAttributes.dl>, IChain<HAttributes.dl>> attributes, params object[] children) { return new HElement ("dl", attributes (null), children); }        
+		public static HElement dl (ChainFunc<HAttributes.dl> attributes, params object[] children) { return new HElement ("dl", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a term (an item) in a definition list.
@@ -404,7 +404,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a term (an item) in a definition list.
         /// </summary>
-		public static HElement dt (Func<IChain<HAttributes.dt>, IChain<HAttributes.dt>> attributes, params object[] children) { return new HElement ("dt", attributes (null), children); }        
+		public static HElement dt (ChainFunc<HAttributes.dt> attributes, params object[] children) { return new HElement ("dt", attributes (null), children); }        
 
 		/// <summary>
         /// Defines emphasized text .
@@ -415,7 +415,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines emphasized text .
         /// </summary>
-		public static HElement em (Func<IChain<HAttributes.em>, IChain<HAttributes.em>> attributes, params object[] children) { return new HElement ("em", attributes (null), children); }        
+		public static HElement em (ChainFunc<HAttributes.em> attributes, params object[] children) { return new HElement ("em", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a container for an external (non-HTML) application.
@@ -426,7 +426,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a container for an external (non-HTML) application.
         /// </summary>
-		public static HElement embed (Func<IChain<HAttributes.embed>, IChain<HAttributes.embed>> attributes, params object[] children) { return new HElement ("embed", attributes (null), children); }        
+		public static HElement embed (ChainFunc<HAttributes.embed> attributes, params object[] children) { return new HElement ("embed", attributes (null), children); }        
 
 		/// <summary>
         /// Groups related elements in a form.
@@ -437,7 +437,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Groups related elements in a form.
         /// </summary>
-		public static HElement fieldset (Func<IChain<HAttributes.fieldset>, IChain<HAttributes.fieldset>> attributes, params object[] children) { return new HElement ("fieldset", attributes (null), children); }        
+		public static HElement fieldset (ChainFunc<HAttributes.fieldset> attributes, params object[] children) { return new HElement ("fieldset", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a caption for a <figure> element.
@@ -448,7 +448,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a caption for a <figure> element.
         /// </summary>
-		public static HElement figcaption (Func<IChain<HAttributes.figcaption>, IChain<HAttributes.figcaption>> attributes, params object[] children) { return new HElement ("figcaption", attributes (null), children); }        
+		public static HElement figcaption (ChainFunc<HAttributes.figcaption> attributes, params object[] children) { return new HElement ("figcaption", attributes (null), children); }        
 
 		/// <summary>
         /// Specifies self-contained content.
@@ -459,7 +459,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Specifies self-contained content.
         /// </summary>
-		public static HElement figure (Func<IChain<HAttributes.figure>, IChain<HAttributes.figure>> attributes, params object[] children) { return new HElement ("figure", attributes (null), children); }        
+		public static HElement figure (ChainFunc<HAttributes.figure> attributes, params object[] children) { return new HElement ("figure", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines font, colour, and size for text.
@@ -470,7 +470,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines font, colour, and size for text.
         /// </summary>
-		public static HElement font (Func<IChain<HAttributes.font>, IChain<HAttributes.font>> attributes, params object[] children) { return new HElement ("font", attributes (null), children); }        
+		public static HElement font (ChainFunc<HAttributes.font> attributes, params object[] children) { return new HElement ("font", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a footer for a document or section.
@@ -481,7 +481,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a footer for a document or section.
         /// </summary>
-		public static HElement footer (Func<IChain<HAttributes.footer>, IChain<HAttributes.footer>> attributes, params object[] children) { return new HElement ("footer", attributes (null), children); }        
+		public static HElement footer (ChainFunc<HAttributes.footer> attributes, params object[] children) { return new HElement ("footer", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an HTML form for user input.
@@ -492,7 +492,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an HTML form for user input.
         /// </summary>
-		public static HElement form (Func<IChain<HAttributes.form>, IChain<HAttributes.form>> attributes, params object[] children) { return new HElement ("form", attributes (null), children); }        
+		public static HElement form (ChainFunc<HAttributes.form> attributes, params object[] children) { return new HElement ("form", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Defines a window (a frame) in a frameset.
@@ -503,7 +503,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Defines a window (a frame) in a frameset.
         /// </summary>
-		public static HElement frame (Func<IChain<HAttributes.frame>, IChain<HAttributes.frame>> attributes, params object[] children) { return new HElement ("frame", attributes (null), children); }        
+		public static HElement frame (ChainFunc<HAttributes.frame> attributes, params object[] children) { return new HElement ("frame", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Defines a set of frames.
@@ -514,7 +514,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Defines a set of frames.
         /// </summary>
-		public static HElement frameset (Func<IChain<HAttributes.frameset>, IChain<HAttributes.frameset>> attributes, params object[] children) { return new HElement ("frameset", attributes (null), children); }        
+		public static HElement frameset (ChainFunc<HAttributes.frameset> attributes, params object[] children) { return new HElement ("frameset", attributes (null), children); }        
 
 		/// <summary>
         /// Defines HTML headings.
@@ -525,7 +525,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines HTML headings.
         /// </summary>
-		public static HElement h1 (Func<IChain<HAttributes.h1>, IChain<HAttributes.h1>> attributes, params object[] children) { return new HElement ("h1", attributes (null), children); }        
+		public static HElement h1 (ChainFunc<HAttributes.h1> attributes, params object[] children) { return new HElement ("h1", attributes (null), children); }        
 
 		/// <summary>
         /// Defines HTML headings.
@@ -536,7 +536,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines HTML headings.
         /// </summary>
-		public static HElement h2 (Func<IChain<HAttributes.h2>, IChain<HAttributes.h2>> attributes, params object[] children) { return new HElement ("h2", attributes (null), children); }        
+		public static HElement h2 (ChainFunc<HAttributes.h2> attributes, params object[] children) { return new HElement ("h2", attributes (null), children); }        
 
 		/// <summary>
         /// Defines HTML headings.
@@ -547,7 +547,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines HTML headings.
         /// </summary>
-		public static HElement h3 (Func<IChain<HAttributes.h3>, IChain<HAttributes.h3>> attributes, params object[] children) { return new HElement ("h3", attributes (null), children); }        
+		public static HElement h3 (ChainFunc<HAttributes.h3> attributes, params object[] children) { return new HElement ("h3", attributes (null), children); }        
 
 		/// <summary>
         /// Defines HTML headings.
@@ -558,7 +558,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines HTML headings.
         /// </summary>
-		public static HElement h4 (Func<IChain<HAttributes.h4>, IChain<HAttributes.h4>> attributes, params object[] children) { return new HElement ("h4", attributes (null), children); }        
+		public static HElement h4 (ChainFunc<HAttributes.h4> attributes, params object[] children) { return new HElement ("h4", attributes (null), children); }        
 
 		/// <summary>
         /// Defines HTML headings.
@@ -569,7 +569,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines HTML headings.
         /// </summary>
-		public static HElement h5 (Func<IChain<HAttributes.h5>, IChain<HAttributes.h5>> attributes, params object[] children) { return new HElement ("h5", attributes (null), children); }        
+		public static HElement h5 (ChainFunc<HAttributes.h5> attributes, params object[] children) { return new HElement ("h5", attributes (null), children); }        
 
 		/// <summary>
         /// Defines HTML headings.
@@ -580,7 +580,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines HTML headings.
         /// </summary>
-		public static HElement h6 (Func<IChain<HAttributes.h6>, IChain<HAttributes.h6>> attributes, params object[] children) { return new HElement ("h6", attributes (null), children); }        
+		public static HElement h6 (ChainFunc<HAttributes.h6> attributes, params object[] children) { return new HElement ("h6", attributes (null), children); }        
 
 		/// <summary>
         /// Defines information about the document.
@@ -591,7 +591,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines information about the document.
         /// </summary>
-		public static HElement head (Func<IChain<HAttributes.head>, IChain<HAttributes.head>> attributes, params object[] children) { return new HElement ("head", attributes (null), children); }        
+		public static HElement head (ChainFunc<HAttributes.head> attributes, params object[] children) { return new HElement ("head", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a header for a document or section.
@@ -602,7 +602,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a header for a document or section.
         /// </summary>
-		public static HElement header (Func<IChain<HAttributes.header>, IChain<HAttributes.header>> attributes, params object[] children) { return new HElement ("header", attributes (null), children); }        
+		public static HElement header (ChainFunc<HAttributes.header> attributes, params object[] children) { return new HElement ("header", attributes (null), children); }        
 
 		/// <summary>
         /// Groups heading (<h1> to <h6>) elements.
@@ -613,7 +613,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Groups heading (<h1> to <h6>) elements.
         /// </summary>
-		public static HElement hgroup (Func<IChain<HAttributes.hgroup>, IChain<HAttributes.hgroup>> attributes, params object[] children) { return new HElement ("hgroup", attributes (null), children); }        
+		public static HElement hgroup (ChainFunc<HAttributes.hgroup> attributes, params object[] children) { return new HElement ("hgroup", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a thematic change in the content.
@@ -624,7 +624,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a thematic change in the content.
         /// </summary>
-		public static HElement hr (Func<IChain<HAttributes.hr>, IChain<HAttributes.hr>> attributes, params object[] children) { return new HElement ("hr", attributes (null), children); }        
+		public static HElement hr (ChainFunc<HAttributes.hr> attributes, params object[] children) { return new HElement ("hr", attributes (null), children); }        
 
 		/// <summary>
         /// Defines the root of an HTML document.
@@ -635,7 +635,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines the root of an HTML document.
         /// </summary>
-		public static HElement html (Func<IChain<HAttributes.html>, IChain<HAttributes.html>> attributes, params object[] children) { return new HElement ("html", attributes (null), children); }        
+		public static HElement html (ChainFunc<HAttributes.html> attributes, params object[] children) { return new HElement ("html", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a part of text in an alternate voice or mood.
@@ -646,7 +646,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a part of text in an alternate voice or mood.
         /// </summary>
-		public static HElement i (Func<IChain<HAttributes.i>, IChain<HAttributes.i>> attributes, params object[] children) { return new HElement ("i", attributes (null), children); }        
+		public static HElement i (ChainFunc<HAttributes.i> attributes, params object[] children) { return new HElement ("i", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an inline frame.
@@ -657,7 +657,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an inline frame.
         /// </summary>
-		public static HElement iframe (Func<IChain<HAttributes.iframe>, IChain<HAttributes.iframe>> attributes, params object[] children) { return new HElement ("iframe", attributes (null), children); }        
+		public static HElement iframe (ChainFunc<HAttributes.iframe> attributes, params object[] children) { return new HElement ("iframe", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an image.
@@ -668,7 +668,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an image.
         /// </summary>
-		public static HElement img (Func<IChain<HAttributes.img>, IChain<HAttributes.img>> attributes, params object[] children) { return new HElement ("img", attributes (null), children); }        
+		public static HElement img (ChainFunc<HAttributes.img> attributes, params object[] children) { return new HElement ("img", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an input control.
@@ -679,7 +679,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an input control.
         /// </summary>
-		public static HElement input (Func<IChain<HAttributes.input>, IChain<HAttributes.input>> attributes, params object[] children) { return new HElement ("input", attributes (null), children); }        
+		public static HElement input (ChainFunc<HAttributes.input> attributes, params object[] children) { return new HElement ("input", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a text that has been inserted into a document.
@@ -690,7 +690,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a text that has been inserted into a document.
         /// </summary>
-		public static HElement ins (Func<IChain<HAttributes.ins>, IChain<HAttributes.ins>> attributes, params object[] children) { return new HElement ("ins", attributes (null), children); }        
+		public static HElement ins (ChainFunc<HAttributes.ins> attributes, params object[] children) { return new HElement ("ins", attributes (null), children); }        
 
 		/// <summary>
         /// Defines keyboard input.
@@ -701,7 +701,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines keyboard input.
         /// </summary>
-		public static HElement kbd (Func<IChain<HAttributes.kbd>, IChain<HAttributes.kbd>> attributes, params object[] children) { return new HElement ("kbd", attributes (null), children); }        
+		public static HElement kbd (ChainFunc<HAttributes.kbd> attributes, params object[] children) { return new HElement ("kbd", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a key-pair generator field (for forms).
@@ -712,7 +712,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a key-pair generator field (for forms).
         /// </summary>
-		public static HElement keygen (Func<IChain<HAttributes.keygen>, IChain<HAttributes.keygen>> attributes, params object[] children) { return new HElement ("keygen", attributes (null), children); }        
+		public static HElement keygen (ChainFunc<HAttributes.keygen> attributes, params object[] children) { return new HElement ("keygen", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a label for an <input> element.
@@ -723,7 +723,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a label for an <input> element.
         /// </summary>
-		public static HElement label (Func<IChain<HAttributes.label>, IChain<HAttributes.label>> attributes, params object[] children) { return new HElement ("label", attributes (null), children); }        
+		public static HElement label (ChainFunc<HAttributes.label> attributes, params object[] children) { return new HElement ("label", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a caption for a <fieldset>, < figure>, or <details> element.
@@ -734,7 +734,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a caption for a <fieldset>, < figure>, or <details> element.
         /// </summary>
-		public static HElement legend (Func<IChain<HAttributes.legend>, IChain<HAttributes.legend>> attributes, params object[] children) { return new HElement ("legend", attributes (null), children); }        
+		public static HElement legend (ChainFunc<HAttributes.legend> attributes, params object[] children) { return new HElement ("legend", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a list item.
@@ -745,7 +745,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a list item.
         /// </summary>
-		public static HElement li (Func<IChain<HAttributes.li>, IChain<HAttributes.li>> attributes, params object[] children) { return new HElement ("li", attributes (null), children); }        
+		public static HElement li (ChainFunc<HAttributes.li> attributes, params object[] children) { return new HElement ("li", attributes (null), children); }        
 
 		/// <summary>
         /// Defines the relationship between a document and an external resource (most used to link to style sheets).
@@ -756,7 +756,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines the relationship between a document and an external resource (most used to link to style sheets).
         /// </summary>
-		public static HElement link (Func<IChain<HAttributes.link>, IChain<HAttributes.link>> attributes, params object[] children) { return new HElement ("link", attributes (null), children); }        
+		public static HElement link (ChainFunc<HAttributes.link> attributes, params object[] children) { return new HElement ("link", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a client-side image-map.
@@ -767,7 +767,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a client-side image-map.
         /// </summary>
-		public static HElement map (Func<IChain<HAttributes.map>, IChain<HAttributes.map>> attributes, params object[] children) { return new HElement ("map", attributes (null), children); }        
+		public static HElement map (ChainFunc<HAttributes.map> attributes, params object[] children) { return new HElement ("map", attributes (null), children); }        
 
 		/// <summary>
         /// Defines marked/highlighted text.
@@ -778,7 +778,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines marked/highlighted text.
         /// </summary>
-		public static HElement mark (Func<IChain<HAttributes.mark>, IChain<HAttributes.mark>> attributes, params object[] children) { return new HElement ("mark", attributes (null), children); }        
+		public static HElement mark (ChainFunc<HAttributes.mark> attributes, params object[] children) { return new HElement ("mark", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a list/menu of commands.
@@ -789,7 +789,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a list/menu of commands.
         /// </summary>
-		public static HElement menu (Func<IChain<HAttributes.menu>, IChain<HAttributes.menu>> attributes, params object[] children) { return new HElement ("menu", attributes (null), children); }        
+		public static HElement menu (ChainFunc<HAttributes.menu> attributes, params object[] children) { return new HElement ("menu", attributes (null), children); }        
 
 		/// <summary>
         /// Defines metadata about an HTML document.
@@ -800,7 +800,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines metadata about an HTML document.
         /// </summary>
-		public static HElement meta (Func<IChain<HAttributes.meta>, IChain<HAttributes.meta>> attributes, params object[] children) { return new HElement ("meta", attributes (null), children); }        
+		public static HElement meta (ChainFunc<HAttributes.meta> attributes, params object[] children) { return new HElement ("meta", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a scalar measurement within a known range (a gauge).
@@ -811,7 +811,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a scalar measurement within a known range (a gauge).
         /// </summary>
-		public static HElement meter (Func<IChain<HAttributes.meter>, IChain<HAttributes.meter>> attributes, params object[] children) { return new HElement ("meter", attributes (null), children); }        
+		public static HElement meter (ChainFunc<HAttributes.meter> attributes, params object[] children) { return new HElement ("meter", attributes (null), children); }        
 
 		/// <summary>
         /// Defines navigation links.
@@ -822,7 +822,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines navigation links.
         /// </summary>
-		public static HElement nav (Func<IChain<HAttributes.nav>, IChain<HAttributes.nav>> attributes, params object[] children) { return new HElement ("nav", attributes (null), children); }        
+		public static HElement nav (ChainFunc<HAttributes.nav> attributes, params object[] children) { return new HElement ("nav", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Defines an alternate content for users that do not support frames.
@@ -833,7 +833,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Defines an alternate content for users that do not support frames.
         /// </summary>
-		public static HElement noframes (Func<IChain<HAttributes.noframes>, IChain<HAttributes.noframes>> attributes, params object[] children) { return new HElement ("noframes", attributes (null), children); }        
+		public static HElement noframes (ChainFunc<HAttributes.noframes> attributes, params object[] children) { return new HElement ("noframes", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an alternate content for users that do not support client-side scripts.
@@ -844,7 +844,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an alternate content for users that do not support client-side scripts.
         /// </summary>
-		public static HElement noscript (Func<IChain<HAttributes.noscript>, IChain<HAttributes.noscript>> attributes, params object[] children) { return new HElement ("noscript", attributes (null), children); }        
+		public static HElement noscript (ChainFunc<HAttributes.noscript> attributes, params object[] children) { return new HElement ("noscript", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an embedded object.
@@ -855,7 +855,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an embedded object.
         /// </summary>
-		public static HElement @object (Func<IChain<HAttributes.@object>, IChain<HAttributes.@object>> attributes, params object[] children) { return new HElement ("object", attributes (null), children); }        
+		public static HElement @object (ChainFunc<HAttributes.@object> attributes, params object[] children) { return new HElement ("object", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an ordered list.
@@ -866,7 +866,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an ordered list.
         /// </summary>
-		public static HElement ol (Func<IChain<HAttributes.ol>, IChain<HAttributes.ol>> attributes, params object[] children) { return new HElement ("ol", attributes (null), children); }        
+		public static HElement ol (ChainFunc<HAttributes.ol> attributes, params object[] children) { return new HElement ("ol", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a group of related options in a drop-down list.
@@ -877,7 +877,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a group of related options in a drop-down list.
         /// </summary>
-		public static HElement optgroup (Func<IChain<HAttributes.optgroup>, IChain<HAttributes.optgroup>> attributes, params object[] children) { return new HElement ("optgroup", attributes (null), children); }        
+		public static HElement optgroup (ChainFunc<HAttributes.optgroup> attributes, params object[] children) { return new HElement ("optgroup", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an option in a drop-down list.
@@ -888,7 +888,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an option in a drop-down list.
         /// </summary>
-		public static HElement option (Func<IChain<HAttributes.option>, IChain<HAttributes.option>> attributes, params object[] children) { return new HElement ("option", attributes (null), children); }        
+		public static HElement option (ChainFunc<HAttributes.option> attributes, params object[] children) { return new HElement ("option", attributes (null), children); }        
 
 		/// <summary>
         /// Defines the result of a calculation.
@@ -899,7 +899,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines the result of a calculation.
         /// </summary>
-		public static HElement output (Func<IChain<HAttributes.output>, IChain<HAttributes.output>> attributes, params object[] children) { return new HElement ("output", attributes (null), children); }        
+		public static HElement output (ChainFunc<HAttributes.output> attributes, params object[] children) { return new HElement ("output", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a paragraph.
@@ -910,7 +910,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a paragraph.
         /// </summary>
-		public static HElement p (Func<IChain<HAttributes.p>, IChain<HAttributes.p>> attributes, params object[] children) { return new HElement ("p", attributes (null), children); }        
+		public static HElement p (ChainFunc<HAttributes.p> attributes, params object[] children) { return new HElement ("p", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a parameter for an object.
@@ -921,7 +921,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a parameter for an object.
         /// </summary>
-		public static HElement param (Func<IChain<HAttributes.param>, IChain<HAttributes.param>> attributes, params object[] children) { return new HElement ("param", attributes (null), children); }        
+		public static HElement param (ChainFunc<HAttributes.param> attributes, params object[] children) { return new HElement ("param", attributes (null), children); }        
 
 		/// <summary>
         /// Defines pre-formatted text.
@@ -932,7 +932,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines pre-formatted text.
         /// </summary>
-		public static HElement pre (Func<IChain<HAttributes.pre>, IChain<HAttributes.pre>> attributes, params object[] children) { return new HElement ("pre", attributes (null), children); }        
+		public static HElement pre (ChainFunc<HAttributes.pre> attributes, params object[] children) { return new HElement ("pre", attributes (null), children); }        
 
 		/// <summary>
         /// Represents the progress of a task.
@@ -943,7 +943,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Represents the progress of a task.
         /// </summary>
-		public static HElement progress (Func<IChain<HAttributes.progress>, IChain<HAttributes.progress>> attributes, params object[] children) { return new HElement ("progress", attributes (null), children); }        
+		public static HElement progress (ChainFunc<HAttributes.progress> attributes, params object[] children) { return new HElement ("progress", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a short quotation.
@@ -954,7 +954,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a short quotation.
         /// </summary>
-		public static HElement q (Func<IChain<HAttributes.q>, IChain<HAttributes.q>> attributes, params object[] children) { return new HElement ("q", attributes (null), children); }        
+		public static HElement q (ChainFunc<HAttributes.q> attributes, params object[] children) { return new HElement ("q", attributes (null), children); }        
 
 		/// <summary>
         /// Defines what to show in browsers that do not support ruby annotations.
@@ -965,7 +965,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines what to show in browsers that do not support ruby annotations.
         /// </summary>
-		public static HElement rp (Func<IChain<HAttributes.rp>, IChain<HAttributes.rp>> attributes, params object[] children) { return new HElement ("rp", attributes (null), children); }        
+		public static HElement rp (ChainFunc<HAttributes.rp> attributes, params object[] children) { return new HElement ("rp", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an explanation/pronunciation of characters (for East Asian typography).
@@ -976,7 +976,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an explanation/pronunciation of characters (for East Asian typography).
         /// </summary>
-		public static HElement rt (Func<IChain<HAttributes.rt>, IChain<HAttributes.rt>> attributes, params object[] children) { return new HElement ("rt", attributes (null), children); }        
+		public static HElement rt (ChainFunc<HAttributes.rt> attributes, params object[] children) { return new HElement ("rt", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a ruby annotation (for East Asian typography).
@@ -987,7 +987,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a ruby annotation (for East Asian typography).
         /// </summary>
-		public static HElement ruby (Func<IChain<HAttributes.ruby>, IChain<HAttributes.ruby>> attributes, params object[] children) { return new HElement ("ruby", attributes (null), children); }        
+		public static HElement ruby (ChainFunc<HAttributes.ruby> attributes, params object[] children) { return new HElement ("ruby", attributes (null), children); }        
 
 		/// <summary>
         /// Defines text that is no longer correct.
@@ -998,7 +998,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines text that is no longer correct.
         /// </summary>
-		public static HElement s (Func<IChain<HAttributes.s>, IChain<HAttributes.s>> attributes, params object[] children) { return new HElement ("s", attributes (null), children); }        
+		public static HElement s (ChainFunc<HAttributes.s> attributes, params object[] children) { return new HElement ("s", attributes (null), children); }        
 
 		/// <summary>
         /// Defines sample output from a computer program.
@@ -1009,7 +1009,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines sample output from a computer program.
         /// </summary>
-		public static HElement samp (Func<IChain<HAttributes.samp>, IChain<HAttributes.samp>> attributes, params object[] children) { return new HElement ("samp", attributes (null), children); }        
+		public static HElement samp (ChainFunc<HAttributes.samp> attributes, params object[] children) { return new HElement ("samp", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a client-side script.
@@ -1020,7 +1020,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a client-side script.
         /// </summary>
-		public static HElement script (Func<IChain<HAttributes.script>, IChain<HAttributes.script>> attributes, params object[] children) { return new HElement ("script", attributes (null), children); }        
+		public static HElement script (ChainFunc<HAttributes.script> attributes, params object[] children) { return new HElement ("script", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a section in a document.
@@ -1031,7 +1031,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a section in a document.
         /// </summary>
-		public static HElement section (Func<IChain<HAttributes.section>, IChain<HAttributes.section>> attributes, params object[] children) { return new HElement ("section", attributes (null), children); }        
+		public static HElement section (ChainFunc<HAttributes.section> attributes, params object[] children) { return new HElement ("section", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a drop-down list.
@@ -1042,7 +1042,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a drop-down list.
         /// </summary>
-		public static HElement select (Func<IChain<HAttributes.select>, IChain<HAttributes.select>> attributes, params object[] children) { return new HElement ("select", attributes (null), children); }        
+		public static HElement select (ChainFunc<HAttributes.select> attributes, params object[] children) { return new HElement ("select", attributes (null), children); }        
 
 		/// <summary>
         /// Defines smaller text.
@@ -1053,7 +1053,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines smaller text.
         /// </summary>
-		public static HElement small (Func<IChain<HAttributes.small>, IChain<HAttributes.small>> attributes, params object[] children) { return new HElement ("small", attributes (null), children); }        
+		public static HElement small (ChainFunc<HAttributes.small> attributes, params object[] children) { return new HElement ("small", attributes (null), children); }        
 
 		/// <summary>
         /// Defines multiple media resources for media elements (<video> and <audio>).
@@ -1064,7 +1064,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines multiple media resources for media elements (<video> and <audio>).
         /// </summary>
-		public static HElement source (Func<IChain<HAttributes.source>, IChain<HAttributes.source>> attributes, params object[] children) { return new HElement ("source", attributes (null), children); }        
+		public static HElement source (ChainFunc<HAttributes.source> attributes, params object[] children) { return new HElement ("source", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a section in a document.
@@ -1075,7 +1075,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a section in a document.
         /// </summary>
-		public static HElement span (Func<IChain<HAttributes.span>, IChain<HAttributes.span>> attributes, params object[] children) { return new HElement ("span", attributes (null), children); }        
+		public static HElement span (ChainFunc<HAttributes.span> attributes, params object[] children) { return new HElement ("span", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines strike-through text.
@@ -1086,7 +1086,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Deprecated in HTML 4.01. Defines strike-through text.
         /// </summary>
-		public static HElement strike (Func<IChain<HAttributes.strike>, IChain<HAttributes.strike>> attributes, params object[] children) { return new HElement ("strike", attributes (null), children); }        
+		public static HElement strike (ChainFunc<HAttributes.strike> attributes, params object[] children) { return new HElement ("strike", attributes (null), children); }        
 
 		/// <summary>
         /// Defines important text.
@@ -1097,7 +1097,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines important text.
         /// </summary>
-		public static HElement strong (Func<IChain<HAttributes.strong>, IChain<HAttributes.strong>> attributes, params object[] children) { return new HElement ("strong", attributes (null), children); }        
+		public static HElement strong (ChainFunc<HAttributes.strong> attributes, params object[] children) { return new HElement ("strong", attributes (null), children); }        
 
 		/// <summary>
         /// Defines style information for a document.
@@ -1108,7 +1108,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines style information for a document.
         /// </summary>
-		public static HElement style (Func<IChain<HAttributes.style>, IChain<HAttributes.style>> attributes, params object[] children) { return new HElement ("style", attributes (null), children); }        
+		public static HElement style (ChainFunc<HAttributes.style> attributes, params object[] children) { return new HElement ("style", attributes (null), children); }        
 
 		/// <summary>
         /// Defines subscripted text.
@@ -1119,7 +1119,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines subscripted text.
         /// </summary>
-		public static HElement sub (Func<IChain<HAttributes.sub>, IChain<HAttributes.sub>> attributes, params object[] children) { return new HElement ("sub", attributes (null), children); }        
+		public static HElement sub (ChainFunc<HAttributes.sub> attributes, params object[] children) { return new HElement ("sub", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a visible heading for a <details> element.
@@ -1130,7 +1130,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a visible heading for a <details> element.
         /// </summary>
-		public static HElement summary (Func<IChain<HAttributes.summary>, IChain<HAttributes.summary>> attributes, params object[] children) { return new HElement ("summary", attributes (null), children); }        
+		public static HElement summary (ChainFunc<HAttributes.summary> attributes, params object[] children) { return new HElement ("summary", attributes (null), children); }        
 
 		/// <summary>
         /// Defines superscripted text.
@@ -1141,7 +1141,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines superscripted text.
         /// </summary>
-		public static HElement sup (Func<IChain<HAttributes.sup>, IChain<HAttributes.sup>> attributes, params object[] children) { return new HElement ("sup", attributes (null), children); }        
+		public static HElement sup (ChainFunc<HAttributes.sup> attributes, params object[] children) { return new HElement ("sup", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a table.
@@ -1152,7 +1152,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a table.
         /// </summary>
-		public static HElement table (Func<IChain<HAttributes.table>, IChain<HAttributes.table>> attributes, params object[] children) { return new HElement ("table", attributes (null), children); }        
+		public static HElement table (ChainFunc<HAttributes.table> attributes, params object[] children) { return new HElement ("table", attributes (null), children); }        
 
 		/// <summary>
         /// Groups the body content in a table.
@@ -1163,7 +1163,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Groups the body content in a table.
         /// </summary>
-		public static HElement tbody (Func<IChain<HAttributes.tbody>, IChain<HAttributes.tbody>> attributes, params object[] children) { return new HElement ("tbody", attributes (null), children); }        
+		public static HElement tbody (ChainFunc<HAttributes.tbody> attributes, params object[] children) { return new HElement ("tbody", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a cell in a table.
@@ -1174,7 +1174,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a cell in a table.
         /// </summary>
-		public static HElement td (Func<IChain<HAttributes.td>, IChain<HAttributes.td>> attributes, params object[] children) { return new HElement ("td", attributes (null), children); }        
+		public static HElement td (ChainFunc<HAttributes.td> attributes, params object[] children) { return new HElement ("td", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a multi-line input control (text area).
@@ -1185,7 +1185,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a multi-line input control (text area).
         /// </summary>
-		public static HElement textarea (Func<IChain<HAttributes.textarea>, IChain<HAttributes.textarea>> attributes, params object[] children) { return new HElement ("textarea", attributes (null), children); }        
+		public static HElement textarea (ChainFunc<HAttributes.textarea> attributes, params object[] children) { return new HElement ("textarea", attributes (null), children); }        
 
 		/// <summary>
         /// Groups the footer content in a table.
@@ -1196,7 +1196,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Groups the footer content in a table.
         /// </summary>
-		public static HElement tfoot (Func<IChain<HAttributes.tfoot>, IChain<HAttributes.tfoot>> attributes, params object[] children) { return new HElement ("tfoot", attributes (null), children); }        
+		public static HElement tfoot (ChainFunc<HAttributes.tfoot> attributes, params object[] children) { return new HElement ("tfoot", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a header cell in a table.
@@ -1207,7 +1207,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a header cell in a table.
         /// </summary>
-		public static HElement th (Func<IChain<HAttributes.th>, IChain<HAttributes.th>> attributes, params object[] children) { return new HElement ("th", attributes (null), children); }        
+		public static HElement th (ChainFunc<HAttributes.th> attributes, params object[] children) { return new HElement ("th", attributes (null), children); }        
 
 		/// <summary>
         /// Groups the header content in a table.
@@ -1218,7 +1218,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Groups the header content in a table.
         /// </summary>
-		public static HElement thead (Func<IChain<HAttributes.thead>, IChain<HAttributes.thead>> attributes, params object[] children) { return new HElement ("thead", attributes (null), children); }        
+		public static HElement thead (ChainFunc<HAttributes.thead> attributes, params object[] children) { return new HElement ("thead", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a date/time.
@@ -1229,7 +1229,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a date/time.
         /// </summary>
-		public static HElement time (Func<IChain<HAttributes.time>, IChain<HAttributes.time>> attributes, params object[] children) { return new HElement ("time", attributes (null), children); }        
+		public static HElement time (ChainFunc<HAttributes.time> attributes, params object[] children) { return new HElement ("time", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a title for the document.
@@ -1240,7 +1240,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a title for the document.
         /// </summary>
-		public static HElement title (Func<IChain<HAttributes.title>, IChain<HAttributes.title>> attributes, params object[] children) { return new HElement ("title", attributes (null), children); }        
+		public static HElement title (ChainFunc<HAttributes.title> attributes, params object[] children) { return new HElement ("title", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a row in a table.
@@ -1251,7 +1251,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a row in a table.
         /// </summary>
-		public static HElement tr (Func<IChain<HAttributes.tr>, IChain<HAttributes.tr>> attributes, params object[] children) { return new HElement ("tr", attributes (null), children); }        
+		public static HElement tr (ChainFunc<HAttributes.tr> attributes, params object[] children) { return new HElement ("tr", attributes (null), children); }        
 
 		/// <summary>
         /// Defines text tracks for media elements (<video> and <audio>).
@@ -1262,7 +1262,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines text tracks for media elements (<video> and <audio>).
         /// </summary>
-		public static HElement track (Func<IChain<HAttributes.track>, IChain<HAttributes.track>> attributes, params object[] children) { return new HElement ("track", attributes (null), children); }        
+		public static HElement track (ChainFunc<HAttributes.track> attributes, params object[] children) { return new HElement ("track", attributes (null), children); }        
 
 		/// <summary>
         /// Not supported in HTML5. Defines Teletype text.
@@ -1273,7 +1273,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Not supported in HTML5. Defines Teletype text.
         /// </summary>
-		public static HElement tt (Func<IChain<HAttributes.tt>, IChain<HAttributes.tt>> attributes, params object[] children) { return new HElement ("tt", attributes (null), children); }        
+		public static HElement tt (ChainFunc<HAttributes.tt> attributes, params object[] children) { return new HElement ("tt", attributes (null), children); }        
 
 		/// <summary>
         /// Defines text that should be stylistically different from normal text.
@@ -1284,7 +1284,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines text that should be stylistically different from normal text.
         /// </summary>
-		public static HElement u (Func<IChain<HAttributes.u>, IChain<HAttributes.u>> attributes, params object[] children) { return new HElement ("u", attributes (null), children); }        
+		public static HElement u (ChainFunc<HAttributes.u> attributes, params object[] children) { return new HElement ("u", attributes (null), children); }        
 
 		/// <summary>
         /// Defines an unordered list.
@@ -1295,7 +1295,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines an unordered list.
         /// </summary>
-		public static HElement ul (Func<IChain<HAttributes.ul>, IChain<HAttributes.ul>> attributes, params object[] children) { return new HElement ("ul", attributes (null), children); }        
+		public static HElement ul (ChainFunc<HAttributes.ul> attributes, params object[] children) { return new HElement ("ul", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a variable.
@@ -1306,7 +1306,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a variable.
         /// </summary>
-		public static HElement var (Func<IChain<HAttributes.var>, IChain<HAttributes.var>> attributes, params object[] children) { return new HElement ("var", attributes (null), children); }        
+		public static HElement var (ChainFunc<HAttributes.var> attributes, params object[] children) { return new HElement ("var", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a video or movie.
@@ -1317,7 +1317,7 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a video or movie.
         /// </summary>
-		public static HElement video (Func<IChain<HAttributes.video>, IChain<HAttributes.video>> attributes, params object[] children) { return new HElement ("video", attributes (null), children); }        
+		public static HElement video (ChainFunc<HAttributes.video> attributes, params object[] children) { return new HElement ("video", attributes (null), children); }        
 
 		/// <summary>
         /// Defines a possible line-break.
@@ -1328,17 +1328,19 @@ namespace Hyperlinq
 		/// <summary>
         /// Defines a possible line-break.
         /// </summary>
-		public static HElement wbr (Func<IChain<HAttributes.wbr>, IChain<HAttributes.wbr>> attributes, params object[] children) { return new HElement ("wbr", attributes (null), children); }        
+		public static HElement wbr (ChainFunc<HAttributes.wbr> attributes, params object[] children) { return new HElement ("wbr", attributes (null), children); }        
 
         // Helpers
 
         public static HDoc Doc (params object[] children) {return new HDoc (null, children);}
-        public static HDoc Doc (Func<IChain<HAttributes.html>,IChain<HAttributes.html>> attributes, params object[] children) {return new HDoc (attributes(null), children);}
+        public static HDoc Doc (ChainFunc<HAttributes.html> attributes, params object[] children) {return new HDoc (attributes(null), children);}
         public static HNode Literal (string s) {return HExtensions.Literal (s);}
         public static string Url (Expression<Action> action) {return HExtensions.Url (action);}
         public static string Url<T> (Expression<Action<T>> action) {return HExtensions.Url (action);}     
-        public static HElement A (string url, object content, Func<IChain<HAttributes.a>,IChain<HAttributes.a>> attributes = null) {return H.a (a => a.href(url).Join(attributes), content);}
-        public static HElement A (Expression<Action> action, object content, Func<IChain<HAttributes.a>,IChain<HAttributes.a>> attributes = null) {return H.a (a => a.href (HExtensions.Url(action)).Join(attributes), content);}
+        public static HElement A (string url, object content) {return H.a (a => a.href(url), content);}
+        public static HElement A (Expression<Action> action, object content) {return H.a (a => a.href (HExtensions.Url(action)), content);}
+		public static HElement A (ChainFunc<HAttributes.a> attributes, string url, object content) {return H.a (a => a.href(url).Join(attributes), content);}
+        public static HElement A (ChainFunc<HAttributes.a> attributes, Expression<Action> action, object content) {return H.a (a => a.href (HExtensions.Url(action)).Join(attributes), content);}
     }
 
     public static class HAttributeExtensions

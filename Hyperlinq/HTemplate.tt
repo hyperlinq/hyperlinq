@@ -33,18 +33,20 @@ namespace Hyperlinq
 		/// <summary>
         /// <#=element.Summary#>
         /// </summary>
-		public static HElement <#= element.SafeName #> (Func<IChain<HAttributes.<#= element.SafeName #>>, IChain<HAttributes.<#= element.SafeName #>>> attributes, params object[] children) { return new HElement ("<#= element.Name #>", attributes (null), children); }        
+		public static HElement <#= element.SafeName #> (ChainFunc<HAttributes.<#= element.SafeName #>> attributes, params object[] children) { return new HElement ("<#= element.Name #>", attributes (null), children); }        
 
 <# } #>
         // Helpers
 
         public static HDoc Doc (params object[] children) {return new HDoc (null, children);}
-        public static HDoc Doc (Func<IChain<HAttributes.html>,IChain<HAttributes.html>> attributes, params object[] children) {return new HDoc (attributes(null), children);}
+        public static HDoc Doc (ChainFunc<HAttributes.html> attributes, params object[] children) {return new HDoc (attributes(null), children);}
         public static HNode Literal (string s) {return HExtensions.Literal (s);}
         public static string Url (Expression<Action> action) {return HExtensions.Url (action);}
         public static string Url<T> (Expression<Action<T>> action) {return HExtensions.Url (action);}     
-        public static HElement A (string url, object content, Func<IChain<HAttributes.a>,IChain<HAttributes.a>> attributes = null) {return H.a (a => a.href(url).Join(attributes), content);}
-        public static HElement A (Expression<Action> action, object content, Func<IChain<HAttributes.a>,IChain<HAttributes.a>> attributes = null) {return H.a (a => a.href (HExtensions.Url(action)).Join(attributes), content);}
+        public static HElement A (string url, object content) {return H.a (a => a.href(url), content);}
+        public static HElement A (Expression<Action> action, object content) {return H.a (a => a.href (HExtensions.Url(action)), content);}
+		public static HElement A (ChainFunc<HAttributes.a> attributes, string url, object content) {return H.a (a => a.href(url).Join(attributes), content);}
+        public static HElement A (ChainFunc<HAttributes.a> attributes, Expression<Action> action, object content) {return H.a (a => a.href (HExtensions.Url(action)).Join(attributes), content);}
     }
 
     public static class HAttributeExtensions
