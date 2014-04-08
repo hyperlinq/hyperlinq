@@ -40,7 +40,7 @@
   <ItemGroup>
     <Reference Include="Hyperlinq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Hyperlinq.1.0.4\lib\net40-client\Hyperlinq.dll</HintPath>
+      <HintPath>..\packages\Hyperlinq.1.0.5\lib\net40-client\Hyperlinq.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
