@@ -190,6 +190,16 @@
             Defines a single line break.
             </summary>
         </member>
+        <member name="M:Hyperlinq.H.button(System.Object[])">
+            <summary>
+            Defines a generic form button which can contain a range of other elements to create complex buttons.
+            </summary>
+        </member>
+        <member name="M:Hyperlinq.H.button(Hyperlinq.ChainFunc{Hyperlinq.HAttributes.button},System.Object[])">
+            <summary>
+            Defines a generic form button which can contain a range of other elements to create complex buttons.
+            </summary>
+        </member>
         <member name="M:Hyperlinq.H.canvas(System.Object[])">
             <summary>
             Used to draw graphics, on the fly, via scripting (usually JavaScript).
@@ -1246,6 +1256,36 @@
             Contains a URI which points to the source of the quote or change.
             </summary>
         </member>
+        <member name="M:Hyperlinq.HAttributeExtensions.autofocus``1(Hyperlinq.IChain{``0},System.Object)">
+            <summary>
+            The element should be automatically focused after the page loaded.
+            </summary>
+        </member>
+        <member name="M:Hyperlinq.HAttributeExtensions.disabled``1(Hyperlinq.IChain{``0},System.Object)">
+            <summary>
+            Indicates whether the user can interact with the element.
+            </summary>
+        </member>
+        <member name="M:Hyperlinq.HAttributeExtensions.form``1(Hyperlinq.IChain{``0},System.Object)">
+            <summary>
+            Indicates the form that is the owner of the element.
+            </summary>
+        </member>
+        <member name="M:Hyperlinq.HAttributeExtensions.name``1(Hyperlinq.IChain{``0},System.Object)">
+            <summary>
+            Name of the element. For example used by the server to identify the fields in form submits.
+            </summary>
+        </member>
+        <member name="M:Hyperlinq.HAttributeExtensions.type``1(Hyperlinq.IChain{``0},System.Object)">
+            <summary>
+            Defines the type of the element.
+            </summary>
+        </member>
+        <member name="M:Hyperlinq.HAttributeExtensions.value``1(Hyperlinq.IChain{``0},System.Object)">
+            <summary>
+            Defines a default value which will be displayed in the element on page load.
+            </summary>
+        </member>
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.HAttributeExtensions.height``1(Hyperlinq.IChain{``0},System.Object)" -->
         <!-- Badly formed XML comment ignored for member "M:Hyperlinq.HAttributeExtensions.width``1(Hyperlinq.IChain{``0},System.Object)" -->
         <member name="M:Hyperlinq.HAttributeExtensions.span``1(Hyperlinq.IChain{``0},System.Object)">
@@ -1258,11 +1298,6 @@
             Indicates whether the element should be checked on page load.
             </summary>
         </member>
-        <member name="M:Hyperlinq.HAttributeExtensions.disabled``1(Hyperlinq.IChain{``0},System.Object)">
-            <summary>
-            Indicates whether the user can interact with the element.
-            </summary>
-        </member>
         <member name="M:Hyperlinq.HAttributeExtensions.icon``1(Hyperlinq.IChain{``0},System.Object)">
             <summary>
             Specifies a picture which represents the command.
@@ -1273,11 +1308,6 @@
             
             </summary>
         </member>
-        <member name="M:Hyperlinq.HAttributeExtensions.type``1(Hyperlinq.IChain{``0},System.Object)">
-            <summary>
-            Defines the type of the element.
-            </summary>
-        </member>
         <member name="M:Hyperlinq.HAttributeExtensions.datetime``1(Hyperlinq.IChain{``0},System.Object)">
             <summary>
             Indicates the date and time associated with the element.
@@ -1286,16 +1316,6 @@
         <member name="M:Hyperlinq.HAttributeExtensions.open``1(Hyperlinq.IChain{``0},System.Object)">
             <summary>
             Indicates whether the details will be shown on page load.
-            </summary>
-        </member>
-        <member name="M:Hyperlinq.HAttributeExtensions.form``1(Hyperlinq.IChain{``0},System.Object)">
-            <summary>
-            Indicates the form that is the owner of the element.
-            </summary>
-        </member>
-        <member name="M:Hyperlinq.HAttributeExtensions.name``1(Hyperlinq.IChain{``0},System.Object)">
-            <summary>
-            Name of the element. For example used by the server to identify the fields in form submits.
             </summary>
         </member>
         <member name="M:Hyperlinq.HAttributeExtensions.accept``1(Hyperlinq.IChain{``0},System.Object)">
@@ -1363,11 +1383,6 @@
             
             </summary>
         </member>
-        <member name="M:Hyperlinq.HAttributeExtensions.autofocus``1(Hyperlinq.IChain{``0},System.Object)">
-            <summary>
-            The element should be automatically focused after the page loaded.
-            </summary>
-        </member>
         <member name="M:Hyperlinq.HAttributeExtensions.dirname``1(Hyperlinq.IChain{``0},System.Object)">
             <summary>
             
@@ -1426,11 +1441,6 @@
         <member name="M:Hyperlinq.HAttributeExtensions.step``1(Hyperlinq.IChain{``0},System.Object)">
             <summary>
             
-            </summary>
-        </member>
-        <member name="M:Hyperlinq.HAttributeExtensions.value``1(Hyperlinq.IChain{``0},System.Object)">
-            <summary>
-            Defines a default value which will be displayed in the element on page load.
             </summary>
         </member>
         <member name="M:Hyperlinq.HAttributeExtensions.challenge``1(Hyperlinq.IChain{``0},System.Object)">

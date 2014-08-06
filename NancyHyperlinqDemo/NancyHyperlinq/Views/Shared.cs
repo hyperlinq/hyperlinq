@@ -37,7 +37,7 @@ namespace NancyHyperlinq
                        select H.tr
                        (
                            H.td(input is HiddenInput ? null : H.label(a => a.@for(input.Id), input.Label)),
-                           H.td(input.Render())
+                           H.td(input.ToElement())
                        )
                     ),
                     H.p (H.input(a => a.type("submit").value("OK")))

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Hyperlinq</id>
+    <version>1.0.7</version>
+    <authors>Ben Albahari</authors>
+    <owners>Ben Albahari</owners>
+    <projectUrl>https://github.com/hyperlinq/hyperlinq</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Terse C# HTML Generation Library</description>
+    <language>en-US</language>
+    <tags>HTML DOM LINQ</tags>
+  </metadata>
+</package>
