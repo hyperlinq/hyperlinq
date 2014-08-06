@@ -7,14 +7,17 @@ namespace Hyperlinq
 {
     public static class HyperlinqHelper
     {
-        static string MergeCss (params string[] csses)
+        static string MergeCss (IEnumerable<string> csses)
         {
             return string.Join (" ", csses.Where (c => !string.IsNullOrEmpty (c)));
         }
 
         static IChain<T> MergeCssAttributes<T> (this IChain<T> chain) where T : HAttribute, new()
         {
-            var combinedCss = MergeCss (chain.ToEnumerable ().Where (a => a.Name == "class" && a.Value != null).Select (a => "" + a.Value).ToArray ());
+            if (!chain.ToEnumerable ().Any (a => a.Name == "class"))
+                return chain;
+
+            var combinedCss = MergeCss (chain.ToEnumerable ().Where (a => a.Name == "class" && a.Value != null).Select (a => "" + a.Value).ToList ());
             var cssAttribute = (T) new T().Create ("class", combinedCss);
             return new Chain<T> (chain.ToEnumerable ().Where (a => a.Name != "class").Concat (new T[] { cssAttribute }));
         }

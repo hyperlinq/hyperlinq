@@ -1,5 +1,0 @@
-C:\Code\Auditionist\Hyperlinq\bin\Debug\Hyperlinq.dll
-C:\Code\Auditionist\Hyperlinq\bin\Debug\Hyperlinq.pdb
-C:\Code\Auditionist\Hyperlinq\obj\Debug\Hyperlinq.dll
-C:\Code\Auditionist\Hyperlinq\obj\Debug\Hyperlinq.pdb
-C:\Code\Auditionist\Hyperlinq\obj\Debug\Hyperlinq.csprojResolveAssemblyReference.cache

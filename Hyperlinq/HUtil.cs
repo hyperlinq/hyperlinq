@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -77,6 +78,31 @@ namespace Hyperlinq
         public static Type GetNonNullableType(this Type t)
         {
             return Nullable.GetUnderlyingType(t) ?? t;
+        }
+    }
+
+    static class EnumHelper
+    {
+        public static KeyValuePair<object, string>[] ValuesWithNames (Type enumType)
+        {
+            var nonNullableEnumType = enumType.GetNonNullableType ();            
+            return Enum.GetValues (nonNullableEnumType).Cast<object> ().Zip (Enum.GetNames (nonNullableEnumType), (value, name) => new KeyValuePair<object, string> (value, name)).ToArray();
+        }
+
+        public static KeyValuePair<object, string>[] ValuesWithNamesCanonical (Type enumType)
+        {
+            return ValuesWithNames (enumType).Select (x => new KeyValuePair<object, string> (x.Key, StringHelper.CSharpNameToFriendlyName (x.Value))).ToArray ();
+        }
+    }
+
+    static class StringHelper
+    {
+        public static string CSharpNameToFriendlyName (string enumName)
+        {
+            return
+                Regex
+                    .Replace (enumName, "([a-z](?=[A-Z])|[A-Z](?=[A-Z][a-z]))", "$1 ")
+                    .Replace ("_", "-");
         }
     }
 }

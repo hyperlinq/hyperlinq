@@ -83,6 +83,7 @@ namespace Hyperlinq
 		    new TElementDescription ("blockquote", @"Defines a section that is quoted from another source."), 
 		    new TElementDescription ("body", @"Defines the document's body."), 
 		    new TElementDescription ("br", @"Defines a single line break."), 
+            new TElementDescription ("button", @"Defines a generic form button which can contain a range of other elements to create complex buttons."), 
 		    new TElementDescription ("canvas", @"Used to draw graphics, on the fly, via scripting (usually JavaScript)."), 
 		    new TElementDescription ("caption", @"Defines a table caption."), 
 		    new TElementDescription ("center", @"Not supported in HTML5. Deprecated in HTML 4.01. Defines centred text."), 

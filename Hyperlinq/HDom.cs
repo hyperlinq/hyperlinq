@@ -63,7 +63,7 @@ namespace Hyperlinq
             this.Name = name;
 
             if (attributes != null)
-                Attributes = attributes.ToEnumerable ().Where (a => a.Value != null).ToArray ();
+                Attributes = attributes.ToEnumerable ().Where (a => a.Value != null).ToList ();
 
             Validate ();
         }
@@ -91,10 +91,11 @@ namespace Hyperlinq
         public override XObject ToXml ()
         {
             var attXml = Attributes == null ? new XNode[0] : Attributes.Select (a => a.ToXml ());
-            var kidXml = Children.EmptyNotNull ().Where (c => c != null).Select (c => c.ToXml ());
+            var kids = Children.EmptyNotNull ().Where (c => c != null).ToList ();
+            var kidXml = kids.Select (c => c.ToXml ());
             var content = attXml.Concat (kidXml);
 
-            var addClosingTag = ! kidXml.Any () && ! EmptyTags.Contains (Name);
+            var addClosingTag = !kids.Any () && !EmptyTags.Contains (Name);
 
             if (addClosingTag)
                 content = content.Concat (new[] { new XText ("") }); // ensures closing tag occurs
@@ -173,7 +174,7 @@ namespace Hyperlinq
 
         public override int GetHashCode ()
         {
-            return Name.GetHashCode () ^ Value.GetHashCode ();
+            return Name.GetHashCode () ^ (Value == null ? 0 : Value.GetHashCode ());
         }
     }
 }

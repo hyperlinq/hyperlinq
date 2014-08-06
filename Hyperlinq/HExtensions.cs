@@ -22,6 +22,13 @@ namespace Hyperlinq
             return attributes.Join ((T) new T ().Create (attribute.Name, attribute.Value));
         }
 
+        public static IChain<T> JoinCustom<T> (this IChain<T> attributes, IEnumerable<HAttribute> customAttributes) where T : HAttribute, new ()
+        {
+            if (customAttributes == null) return attributes;
+
+            return attributes.Join (new Chain<T> (customAttributes.Where (a => a != null).Select (a => (T) new T ().Create (a.Name, a.Value))));
+        }
+
         public static IChain<T> href<T> (this IChain<T> attributes, Expression<Action> action) where T : HAttribute, IhrefAttribute, new()
         {
             return attributes.href (Url (action));
@@ -42,7 +49,9 @@ namespace Hyperlinq
             return ResolveUrl (action.Body);
         }
 
-        public static Func<Expression, string> ResolveUrl = SimpleUrlResolver.ResolveUrl;      
+        public static Func<Expression, string> ResolveUrl = SimpleUrlResolver.ResolveUrl;
+
+        public static Func<MemberInfo, bool> ResolveIsRequired;
 
         public static HNode Literal (string s)
         {

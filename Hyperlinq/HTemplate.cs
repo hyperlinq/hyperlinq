@@ -209,6 +209,17 @@ namespace Hyperlinq
 		public static HElement br (ChainFunc<HAttributes.br> attributes, params object[] children) { return new HElement ("br", attributes (null), children); }        
 
 		/// <summary>
+        /// Defines a generic form button which can contain a range of other elements to create complex buttons.
+        /// </summary>
+        
+		public static HElement button (params object[] children) { return new HElement ("button", null, children); }
+        
+		/// <summary>
+        /// Defines a generic form button which can contain a range of other elements to create complex buttons.
+        /// </summary>
+		public static HElement button (ChainFunc<HAttributes.button> attributes, params object[] children) { return new HElement ("button", attributes (null), children); }        
+
+		/// <summary>
         /// Used to draw graphics, on the fly, via scripting (usually JavaScript).
         /// </summary>
         
@@ -1444,6 +1455,36 @@ namespace Hyperlinq
         public static IChain<T> cite<T> (this IChain<T> attributes, object value) where T : HAttribute, IciteAttribute,  new() { return attributes.Custom ("cite", value); }        
 
 		/// <summary>
+        /// The element should be automatically focused after the page loaded.
+        /// </summary>
+        public static IChain<T> autofocus<T> (this IChain<T> attributes, object value) where T : HAttribute, IautofocusAttribute,  new() { return attributes.Custom ("autofocus", value); }        
+
+		/// <summary>
+        /// Indicates whether the user can interact with the element.
+        /// </summary>
+        public static IChain<T> disabled<T> (this IChain<T> attributes, object value) where T : HAttribute, IdisabledAttribute,  new() { return attributes.Custom ("disabled", value); }        
+
+		/// <summary>
+        /// Indicates the form that is the owner of the element.
+        /// </summary>
+        public static IChain<T> form<T> (this IChain<T> attributes, object value) where T : HAttribute, IformAttribute,  new() { return attributes.Custom ("form", value); }        
+
+		/// <summary>
+        /// Name of the element. For example used by the server to identify the fields in form submits.
+        /// </summary>
+        public static IChain<T> name<T> (this IChain<T> attributes, object value) where T : HAttribute, InameAttribute,  new() { return attributes.Custom ("name", value); }        
+
+		/// <summary>
+        /// Defines the type of the element.
+        /// </summary>
+        public static IChain<T> type<T> (this IChain<T> attributes, object value) where T : HAttribute, ItypeAttribute,  new() { return attributes.Custom ("type", value); }        
+
+		/// <summary>
+        /// Defines a default value which will be displayed in the element on page load.
+        /// </summary>
+        public static IChain<T> value<T> (this IChain<T> attributes, object value) where T : HAttribute, IvalueAttribute,  new() { return attributes.Custom ("value", value); }        
+
+		/// <summary>
         /// Note: In some instances, such as <div>, this is a legacy attribute, in which case the CSS height property should be used instead. In other cases, such as <canvas>, the height must be specified with this attribute.
         /// </summary>
         public static IChain<T> height<T> (this IChain<T> attributes, object value) where T : HAttribute, IheightAttribute,  new() { return attributes.Custom ("height", value); }        
@@ -1464,11 +1505,6 @@ namespace Hyperlinq
         public static IChain<T> @checked<T> (this IChain<T> attributes, object value) where T : HAttribute, IcheckedAttribute,  new() { return attributes.Custom ("checked", value); }        
 
 		/// <summary>
-        /// Indicates whether the user can interact with the element.
-        /// </summary>
-        public static IChain<T> disabled<T> (this IChain<T> attributes, object value) where T : HAttribute, IdisabledAttribute,  new() { return attributes.Custom ("disabled", value); }        
-
-		/// <summary>
         /// Specifies a picture which represents the command.
         /// </summary>
         public static IChain<T> icon<T> (this IChain<T> attributes, object value) where T : HAttribute, IiconAttribute,  new() { return attributes.Custom ("icon", value); }        
@@ -1479,11 +1515,6 @@ namespace Hyperlinq
         public static IChain<T> radiogroup<T> (this IChain<T> attributes, object value) where T : HAttribute, IradiogroupAttribute,  new() { return attributes.Custom ("radiogroup", value); }        
 
 		/// <summary>
-        /// Defines the type of the element.
-        /// </summary>
-        public static IChain<T> type<T> (this IChain<T> attributes, object value) where T : HAttribute, ItypeAttribute,  new() { return attributes.Custom ("type", value); }        
-
-		/// <summary>
         /// Indicates the date and time associated with the element.
         /// </summary>
         public static IChain<T> datetime<T> (this IChain<T> attributes, object value) where T : HAttribute, IdatetimeAttribute,  new() { return attributes.Custom ("datetime", value); }        
@@ -1492,16 +1523,6 @@ namespace Hyperlinq
         /// Indicates whether the details will be shown on page load.
         /// </summary>
         public static IChain<T> open<T> (this IChain<T> attributes, object value) where T : HAttribute, IopenAttribute,  new() { return attributes.Custom ("open", value); }        
-
-		/// <summary>
-        /// Indicates the form that is the owner of the element.
-        /// </summary>
-        public static IChain<T> form<T> (this IChain<T> attributes, object value) where T : HAttribute, IformAttribute,  new() { return attributes.Custom ("form", value); }        
-
-		/// <summary>
-        /// Name of the element. For example used by the server to identify the fields in form submits.
-        /// </summary>
-        public static IChain<T> name<T> (this IChain<T> attributes, object value) where T : HAttribute, InameAttribute,  new() { return attributes.Custom ("name", value); }        
 
 		/// <summary>
         /// List of types the server accepts, typically a file type.
@@ -1569,11 +1590,6 @@ namespace Hyperlinq
         public static IChain<T> usemap<T> (this IChain<T> attributes, object value) where T : HAttribute, IusemapAttribute,  new() { return attributes.Custom ("usemap", value); }        
 
 		/// <summary>
-        /// The element should be automatically focused after the page loaded.
-        /// </summary>
-        public static IChain<T> autofocus<T> (this IChain<T> attributes, object value) where T : HAttribute, IautofocusAttribute,  new() { return attributes.Custom ("autofocus", value); }        
-
-		/// <summary>
         /// 
         /// </summary>
         public static IChain<T> dirname<T> (this IChain<T> attributes, object value) where T : HAttribute, IdirnameAttribute,  new() { return attributes.Custom ("dirname", value); }        
@@ -1632,11 +1648,6 @@ namespace Hyperlinq
         /// 
         /// </summary>
         public static IChain<T> step<T> (this IChain<T> attributes, object value) where T : HAttribute, IstepAttribute,  new() { return attributes.Custom ("step", value); }        
-
-		/// <summary>
-        /// Defines a default value which will be displayed in the element on page load.
-        /// </summary>
-        public static IChain<T> value<T> (this IChain<T> attributes, object value) where T : HAttribute, IvalueAttribute,  new() { return attributes.Custom ("value", value); }        
 
 		/// <summary>
         /// A challenge string that is submitted along with the public key.
@@ -2008,6 +2019,13 @@ namespace Hyperlinq
             public br () { }
             public br (string name, object value) : base (name, value) {}
             public override HAttribute Create (string name, object value) {return new br (name, value); }
+        }
+
+        public class button : HAttribute, IautofocusAttribute, IdisabledAttribute, IformAttribute, InameAttribute, ItypeAttribute, IvalueAttribute
+        {
+            public button () { }
+            public button (string name, object value) : base (name, value) {}
+            public override HAttribute Create (string name, object value) {return new button (name, value); }
         }
 
         public class canvas : HAttribute, IheightAttribute, IwidthAttribute
@@ -2750,18 +2768,20 @@ namespace Hyperlinq
         public interface IpreloadAttribute {}
         public interface IsrcAttribute {}
         public interface IciteAttribute {}
+        public interface IautofocusAttribute {}
+        public interface IdisabledAttribute {}
+        public interface IformAttribute {}
+        public interface InameAttribute {}
+        public interface ItypeAttribute {}
+        public interface IvalueAttribute {}
         public interface IheightAttribute {}
         public interface IwidthAttribute {}
         public interface IspanAttribute {}
         public interface IcheckedAttribute {}
-        public interface IdisabledAttribute {}
         public interface IiconAttribute {}
         public interface IradiogroupAttribute {}
-        public interface ItypeAttribute {}
         public interface IdatetimeAttribute {}
         public interface IopenAttribute {}
-        public interface IformAttribute {}
-        public interface InameAttribute {}
         public interface IacceptAttribute {}
         public interface Iaccept_charsetAttribute {}
         public interface IactionAttribute {}
@@ -2775,7 +2795,6 @@ namespace Hyperlinq
         public interface IsrcdocAttribute {}
         public interface IismapAttribute {}
         public interface IusemapAttribute {}
-        public interface IautofocusAttribute {}
         public interface IdirnameAttribute {}
         public interface IlistAttribute {}
         public interface ImaxAttribute {}
@@ -2788,7 +2807,6 @@ namespace Hyperlinq
         public interface IrequiredAttribute {}
         public interface IsizeAttribute {}
         public interface IstepAttribute {}
-        public interface IvalueAttribute {}
         public interface IchallengeAttribute {}
         public interface IkeytypeAttribute {}
         public interface IforAttribute {}
