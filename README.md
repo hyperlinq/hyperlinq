@@ -1,6 +1,40 @@
 Hyperlinq on Nuget:
 https://www.nuget.org/packages/Hyperlinq
 
+
+## What is Hyperlinq?
+
+_Hyperlinq_ is a C# library for tersely constructing the elements and attributes that comprise an HTML DOM. Here's an example:
+
+    H.head (  
+        H.title ("Hello world"),  
+        H.link (a => a.href ("/favicon.ico")  
+                      .rel ("shortcut icon")  
+                      .type ("image/x-icon"))  
+    )  
+
+Which produces the following HTML:
+
+    <head>
+        <title>Hello world</title>
+        <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </head>
+
+As you can see, the C# version is comparable to the HTML version in terms of terseness and readability. The real benefit however of writing html in C# is _programmability_.
+
+Eliminating duplicate code is as simple as any routine C# refactoring. Let's refactor the expression in our previous code snippet into a general purpose method:
+
+    HElement GetHead (string title)
+    {
+        return 
+            H.head (
+                H.title (title),
+                H.link (a => a.href ("/favicon.ico")
+                              .rel ("shortcut icon")
+                              .type ("image/x-icon"))
+            );
+    }
+
 ## What's the motivation behind Hyperlinq?
 
 There were several aspects of ASP.NET Razor that were problematic for my project:
