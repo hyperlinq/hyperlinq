@@ -71,10 +71,6 @@ What's notable is that's there's nothing notable. It's just plain C# code. C#'s 
         select H.li (item)
     )
 
-## When should I use Hyperlinq?
-
-I'm definitely not _always_ recommending Hyperlinq for html generation. I think that for writing _documents_, where the content is not generated and cannot be generalized, as opposed to a heavily databound page, that a markdown language is the right choice.
-
 ## Isn't it bad to write HTML with C# code? Doesn't that violate the separation of concerns between UI code and business logic?
 
 No. Suppose you want `A` to depend on `B` but not vice-versa. That's trivial to code. It's illusory that writing `A` in separate language (e.g. Razor) or housing `A` in a separate file (*.cshtml) to `B` necessarily helps. Sometimes it actually encourages hacks, and furthermore hacks that are harder for maintenance programmers to see.
