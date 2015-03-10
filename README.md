@@ -97,7 +97,7 @@ A hyperlinq that generated that URL might be coded as follows:
 
     H.a (a => a.href (H.Url(() => Contact(model.Name)), model.DisplayName)
   
-The default implementation of `Url` is to concatenate the method name with the arguments, each prefixed with a forward slash. That implementation can be swapped by modifying the `UrlResolver` property, a `Func` that takes an `Expression` and returns a `string` (the url). For MVC, an implementation that queried the routing objects would be used.
+The default implementation of `Url` is to concatenate the method name with the arguments, each prefixed with a forward slash. That implementation can be swapped by modifying the `UrlResolver` property, a `Func` that takes an `Expression` and returns a `string` (the url). For MVC or for attributing routing, an implementation that queried the routing objects would be used.
 
 ## How do I output an entire document, rather than an element?
 
