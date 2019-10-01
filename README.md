@@ -19,7 +19,7 @@ Which produces the following HTML:
         <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     </head>
 
-As you can see, the C# version is comparable to the HTML version in terms of terseness and readability. The real benefit however of writing html in C# is _programmability_.
+As you can see, the C# version is comparable to the HTML version in terms of terseness and readability. The real benefit, however, of writing HTML in C# is _programmability_.
 
 Eliminating duplicate code is as simple as any routine C# refactoring. Let's refactor the expression in our previous code snippet into a general purpose method:
 
@@ -34,20 +34,18 @@ Eliminating duplicate code is as simple as any routine C# refactoring. Let's ref
             );
     }
 
-Hyperlinq powers https://www.auditionist.com
-
 ## What's the motivation behind Hyperlinq?
 
 There were several aspects of ASP.NET Razor that were problematic for my project:
 
 1. I found the partial view mechanism unwieldy. Factoring out common HTML code was tedious; eliminating code duplication was a battle, not a breeze. I found myself reluctant to refactor views I knew weren't correctly designed.
-2. I found interweaving c# code and html code ugly. Sure, it was better with Razor, but still not good enough.
+2. I found interweaving C# code and HTML code ugly. Sure, it was better with Razor, but still not good enough.
 3. I found my project was littered with too many files, where I spent far too much time navigating, creating, renaming, and deleting them (along with adjusting the references to those files). Poor workflow. I believe in separating concerns; not scattering concerns. Ordinary C# code is really agnostic with file organization. Razor code isn't and I don't like the prescribed organization.
 4. I felt uncomfortable choosing between writing an HtmlHelper vs. a partial views, when there were pros and cons of each. Why must there be entirely separate mechanisms? It's not optimal.
 5. I felt there like I was writing in a framework not designed with static typing in mind (which is true because ASP.NET MVC was inspired by Ruby on Rails, a dynamic language). For example, why are calls to partial views and controller methods untyped? It makes refactoring painful. It's C#! This sort of problem is solved by using types, not strings.
 6. I felt there were too many unnecessarily specialized constructs in Razor. Often constructs that were just ports of C# features with their own syntax, along with arbitrary limitations. Why couldn't I pass in a generic T as part of the model for my partial view? Isn't a layout really just a view with optional parameters? How does the nested layout mechanism work and what can and can't it do? And I don't want to _wait_ for the next release of MVC to hopefully finally get just the most upvoted features; I want an easy general mechanism where I can have all of these things _now_.
 
-I then asked myself the question: is C# really incapable of building an object model that can describe a UI? Because it it was, it would eliminate all of the above problems. I knew Linq to XML already lets you do a decent job of building a DOM; it just wasn't terse and typed. So I came up with a way to building a DOM that was terse and typed.
+I then asked myself the question: is C# really incapable of building an object model that can describe a UI? Because it it was, it would eliminate all of the above problems. I knew LINQ to XML already lets you do a decent job of building a DOM; it just wasn't terse and typed. So I came up with a way to building a DOM that was terse and typed.
 
 Here's a layout in Hyperlinq:
 
@@ -60,7 +58,7 @@ Here's a layout in Hyperlinq:
             );
     }
 
-What's notable is that's there's nothing notable. It's just plain C# code. C#'s optional parameters are used for optional elements rendered in the layout. Hyperlinq's element constructors work in the same way Linq to XML's element constructor's work. Null elements melt away. Elements that are enumerables are automatically expanded out. This makes constructing child elements easy:
+What's notable is that's there's nothing notable. It's just plain C# code. C#'s optional parameters are used for optional elements rendered in the layout. Hyperlinq's element constructors work in the same way LINQ to XML's element constructor's work. Null elements melt away. Elements that are enumerables are automatically expanded out. This makes constructing child elements easy:
 
     H.ul (
         H.li ("One"),
@@ -78,7 +76,7 @@ No. Suppose you want `A` to depend on `B` but not vice-versa. That's trivial to 
 
 ## Is there any special support for writing URLs?
 
-Yes.  The idea is that you can call methods in your API that map to url routes in a statically typed manner. The `H` class has a method `Url` that takes an `Expression` and converts it into a `string` (the url). Its usage is as follows:
+Yes.  The idea is that you can call methods in your API that map to URL routes in a statically typed manner. The `H` class has a method `Url` that takes an `Expression` and converts it into a `string` (the url). Its usage is as follows:
 
     H.Url(() => Contact("bob"))
 
@@ -86,7 +84,7 @@ This will produce the following URL:
 
     /contact/bob
 
-A hyperlinq that generated that URL might be coded as follows:
+A Hyperlinq that generated that URL might be coded as follows:
 
     H.A (() => Contact(model.Name), model.DisplayName)
 
@@ -117,7 +115,7 @@ To call:
 
 ## Where are the HTML events?
 
-To avoid clutter, HTML events such as click, aren't available for each item. There are two workarounds for this.
+To avoid clutter, HTML events such as click aren't available for each item. There are two workarounds for this.
 
 1. Use `a => a.Custom ("click", "...")`
 2. Use JQuery to hook up the events, where the event binds based on an element's `id`, `name`, or `class`.
@@ -130,8 +128,8 @@ It was auto generated using a T4 template, where the input is a list of HTML ele
 
 ## Known Issues
 
-The list of elements and attributes and XML documentation for intellisense on those elements and attributes were scraped somewhere of the internet - can't remember where, but those sources might not be reliable.
+The list of elements and attributes and XML documentation for IntelliSense on those elements and attributes were scraped somewhere of the internet - can't remember where, but those sources might not be reliable.
 
 ## Is there any special support for CSS?
 
-Using a T4 template, you could generate a c# file by scanning the CSS or .less files in the project, such that you can refer to CSS classes statically.
+Using a T4 template, you could generate a C# file by scanning the CSS or .less files in the project, such that you can refer to CSS classes statically.
